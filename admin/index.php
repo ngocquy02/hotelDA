@@ -1,5 +1,7 @@
 <?php
-		require_once('include/driver.php');
+		require_once('include/config.php');
+		require_once('include/admin_db.php');
+		require_once('link.php');
 		session_start();
 		if (isset($_SESSION['email'])){
 		header ("Location: $plink/controller/dashboard.php");
