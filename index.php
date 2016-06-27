@@ -17,11 +17,11 @@
 <body class="container">
 <div>
 	<?php
-		include('include/header.php');
-		include('include/menu.php');
-		include('include/booking.php');
-		include('include/container.php');
-		include('include/footer.php');
+		include('includes/header.php');
+		include('includes/menu.php');
+		include('includes/booking.php');
+		include('includes/container.php');
+		include('includes/footer.php');
 	?>
 </div>
 </body>

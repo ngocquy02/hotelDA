@@ -1,5 +1,5 @@
 <?php
-	require_once('include/driver.php');
+	require_once('admin/link.php');
 ?>
 <!--
 Author: W3layouts
@@ -20,7 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<h1><a href="<?php echo $plink ;?>">Trang Chủ</a></h1>
 	<div class="banner">
-		<img src="<?php echo $plink ;?>/img/banner.png" alt="" />
+		<img src="<?php echo $plink ;?>/img/banner.png" alt="error" />
 	</div>
 	<div class="page">
 		<h2>Không tìm thấy trang</h2>
