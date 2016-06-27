@@ -1,6 +1,5 @@
 <?php
-		require_once('../include/config.php');
-        require_once('../link.php');
+require_once('../include/driver.php');
 		session_start();
 		if (isset($_SESSION['email'])==NULL) {
 			header ("Location: $plink");

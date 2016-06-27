@@ -1,5 +1,4 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../link.php');
+	require_once('../include/driver.php');
 	header ("Location: $plink");
 ?>

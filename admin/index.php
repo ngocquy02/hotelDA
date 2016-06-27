@@ -1,13 +1,11 @@
 <?php
-		require_once('include/config.php');
-		require_once('include/admin_db.php');
-		require_once('link.php');
+		require_once('include/driver.php');
 		session_start();
 		if (isset($_SESSION['email'])){
 		header ("Location: $plink/controller/dashboard.php");
 		}
 ?>
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
