@@ -2,7 +2,7 @@
 	require_once('../include/config.php');
 	require_once('../include/admin_db.php');
 	require_once('../link.php');
-	$users_admin=array(get_list_admin());
+	$users_admin=get_list_admin();
 	session_start();
 	if (isset($_SESSION['email'])==NULL) {
 		header ("Location: $plink");

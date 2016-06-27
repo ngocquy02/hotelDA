@@ -26,7 +26,7 @@ function get_list_admin() {
     try {
         $statement = $db->prepare($query);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {

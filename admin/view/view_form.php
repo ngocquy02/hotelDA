@@ -56,17 +56,8 @@
 								</select>
 				              </div>
 				              <div class="col-md-6 form-group">
-				                <label for="sel3">Chọn Giá</label>
-								<select class="form-control" id="sel3">
-									<option>Chọn Giá</option>
-									<option>Giá 1</option>
-									<option>Giá 2</option>
-									<option>Giá 3</option>
-								</select>
-				              </div>
-				              <div class="col-md-6 form-group">
 				                <label for="sel4">Giá</label>
-								<input type="text" class="form-control" name="price" id="sel4">
+								<input type="text" class="form-control" name="price" id="sel4" disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel5">Ngày đến</label>
