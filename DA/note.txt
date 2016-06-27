@@ -1,0 +1,24 @@
+require ('DB_driver.php');
+ 
+// T?o M?i Ð?i Tý?ng
+$DB = new DB_driver();
+ 
+/// INSERT
+$DB->insert('customer', array(
+    'name' => 'Nguy?n Vãn Cý?ng',
+    'phone' => '0979306603'
+));
+ 
+// UPDATE
+$DB->update('customer', array(
+    'name' => 'TheHalfHeart'
+), 'id = 1');
+ 
+// DELETE
+$DB->remove('customer', 'id = 1');
+ 
+// GET LIST
+var_dump($DB->get_list('select * from customer'));
+ 
+// GET 1 ROW
+var_dump($DB->get_row('SELECT id, name FROM sort_of_room WHERE id = 1;'));
