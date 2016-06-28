@@ -1,10 +1,14 @@
 <?php
+	require_once('../include/config.php');
+	require_once('../include/admin_db.php');
+	require_once('../include/get_list.php');
+	require_once('../link.php');
  	session_start();
 	if (isset($_SESSION['email'])==NULL) {
 		header ("Location: $plink");
 	}
 		require_once('menu.php');
-
+		$setting=get_setting();
 ?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -116,7 +120,7 @@
 							<svg class="glyph stroked eye"><use xlink:href="#stroked-eye"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">25.2k</div>
+							<div class="large"><?php echo $setting['view'];?></div>
 							<div class="text-muted">Lượt truy cập</div>
 						</div>
 					</div>
