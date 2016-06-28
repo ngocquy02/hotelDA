@@ -345,10 +345,18 @@ a.bg-danger:hover {
 .panel-teal { background: #1ebfae; color: #fff; }
 .panel-orange { background: #ffb53e; color: #fff; }
 .panel-red { background: #f9243f; color: #fff; }
+.panel-pink { background: #e94167; color: #fff; }
+.panel-yellow{background: #ffcc00; color: #fff}
+.panel-purple{background: #4e3c66; color: #fff}
+.panel-org{background: #d75c37;color: #fff}
 
 .panel-blue .panel-body p,
 .panel-teal .panel-body p,
 .panel-orange .panel-body p,
+.panel-pink .panel-body p,
+.panel-yellow .panel-body p,
+.panel-purple .panel-body p,
+.panel-org .panel-body p,
 .panel-red .panel-body p { 
 	color: #fff; 
 	color: rgba(255, 255, 255, .8);
@@ -357,6 +365,10 @@ a.bg-danger:hover {
 .panel-blue .panel-heading,
 .panel-teal .panel-heading,
 .panel-orange .panel-heading,
+.panel-pink .panel-heading,
+.panel-yellow .panel-heading,
+.panel-purple .panel-heading,
+.panel-org .panel-heading,
 .panel-red .panel-heading {
 	border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
@@ -364,6 +376,10 @@ a.bg-danger:hover {
 .panel-blue .text-muted,
 .panel-teal .text-muted,
 .panel-orange .text-muted,
+.panel-pink .text-muted,
+.panel-yellow .text-muted,
+.panel-purple .text-muted,
+.panel-org .text-muted,
 .panel-red .text-muted { 
 	color: rgba(255, 255, 255, .5); 
 }
@@ -429,6 +445,10 @@ a.bg-danger:hover {
 .panel-teal .widget-left { background: #1ebfae; color: #fff; }
 .panel-orange .widget-left { background: #ffb53e; color: #fff; }
 .panel-red .widget-left { background: #f9243f; color: #fff; }
+.panel-pink .widget-left { background: #e94167; color: #fff; }
+.panel-yellow .widget-left { background: #ffcc00; color: #fff; }
+.panel-purple .widget-left { background: #4e3c66; color: #fff; }
+.panel-org .widget-left { background: #d75c37; color: #fff; }
 
 .panel-widget {
 	background: #fff;
@@ -681,6 +701,10 @@ h1.page-header {
 #easypiechart-teal .percent { color: #1ebfae;}
 #easypiechart-orange .percent { color: #ffb53e;}
 #easypiechart-red .percent { color: #ef4040;}
+#easypiechart-pink .percent { color: #e94167;}
+#easypiechart-yellow .percent { color: #ffcc00;}
+#easypiechart-purple .percent { color: #4e3c66;}
+#easypiechart-org .percent { color: #d75c37;}
 
 /*Calendar Widget*/
 

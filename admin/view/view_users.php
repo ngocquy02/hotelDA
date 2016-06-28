@@ -8,7 +8,6 @@
 		header ("Location: $plink");
 	}
 	require_once('menu.php');
-	
 ?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -37,7 +36,7 @@
 										<th scope="row" style="list-style-type: none;text-align:center"><?php echo $users['employee_number']?></th>
 										<td style="list-style-type: none;text-align:center" charset=utf-8><?php echo $users['name']?></td>
 										<td type='date' style="list-style-type: none;text-align:center"><?php echo date('d/m/Y',strtotime($users['birth_day']));?></td>
-										<td style="list-style-type: none;text-align:center"><?php echo $users['gender_name'];?></td>
+										<td style="list-style-type: none;text-align:center"><?php echo $users['gender'];?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $users['phone']?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $users['email']?></td>
 										<td class="">
@@ -65,7 +64,7 @@
 					</section>
 					<div class="col-md-5">
 					</div>			              
-						<a href="<?php echo $plink;?>/controller/add_user.php"">
+						<a href="<?php echo $plink;?>/controller/add_admin.php"">
 						<button class="col-md-2 btn btn-primary">Thêm người dùng</button>
 						</a>
 					<div class="col-md-5">

@@ -1,32 +1,14 @@
 <?php
-function get_gender($gender) {
-    global $db;
-    $query = '
-        SELECT *
-        FROM gender';
-    try {
-        $statement = $db->prepare($query);
-        $statement->bindValue(':gender', $gender);
-        $statement->execute();
-        $result = $statement->fetch();
-        $statement->closeCursor();
-        return $result;
-    } catch (PDOException $e) {
-        $error_message = $e->getMessage();
-        display_db_error($error_message);
-    }
-}
 
-function get_level($level) {
+function get_level() {
     global $db;
     $query = '
         SELECT *
         FROM level';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':level', $level);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
@@ -35,16 +17,37 @@ function get_level($level) {
     }
 }
 
-function get_status($status) {
+function add_level($name) {
+    global $db;
+    $query = 'INSERT INTO level
+                 (`name`)
+              VALUES
+                 (:name)';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':name', $name);
+        $statement->execute();
+        $statement->closeCursor();
+
+        // Get the last product ID that was automatically generated
+        $category_id = $db->lastInsertId();
+        return $category_id;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
+
+function get_status() {
     global $db;
     $query = '
         SELECT *
         FROM status';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':status', $status);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
@@ -53,16 +56,37 @@ function get_status($status) {
     }
 }
 
-function get_city($city) {
+
+function add_status($name) {
+    global $db;
+    $query = 'INSERT INTO status
+                 (`name`)
+              VALUES
+                 (:name)';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':name', $name);
+        $statement->execute();
+        $statement->closeCursor();
+
+        // Get the last product ID that was automatically generated
+        $category_id = $db->lastInsertId();
+        return $category_id;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
+function get_city() {
     global $db;
     $query = '
         SELECT *
         FROM city';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':city', $city);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
@@ -70,5 +94,9 @@ function get_city($city) {
         display_db_error($error_message);
     }
 }
+
+
+
+
 
 ?>

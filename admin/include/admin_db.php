@@ -22,7 +22,7 @@ function get_admin($admin_email) {
 function get_list_admin() {
     global $db;
     $query = '
-        SELECT * FROM gender, user_admin WHERE gender.id=user_admin.gender_id';
+        SELECT * FROM user_admin';
     try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -35,19 +35,19 @@ function get_list_admin() {
     }
 }
 
-function add_admin($name,$adress,$birth_day,$city,$email,$gender_id,$level_id,$password,$passport,$phone,$employee_number) {
+function add_admin($name,$adress,$birth_day,$city_id,$email,$gender,$level_id,$password,$passport,$phone,$employee_number) {
     global $db;
     $query = 'INSERT INTO user_admin
-                 (`adress`, `birth_day`, `city`, `email`, `gender_id`, `level_id`, `name`, `passport`, `password`, `phone`, `employee_number`)
+                 (`adress`, `birth_day`, `city_id`, `email`, `gender`, `level_id`, `name`, `passport`, `password`, `phone`, `employee_number`)
               VALUES
-                 (:adress, :birth_day, :city, :email, :gender_id, :level_id, :name, :passport, :password, :phone, :employee_number)';
+                 (:adress, :birth_day, :city_id, :email, :gender, :level_id, :name, :passport, :password, :phone, :employee_number)';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':adress', $adress);
         $statement->bindValue(':birth_day', $birth_day);
-        $statement->bindValue(':city', $city);
+        $statement->bindValue(':city_id', $city_id);
         $statement->bindValue(':email', $email);
-        $statement->bindValue(':gender_id', $gender_id);
+        $statement->bindValue(':gender', $gender);
         $statement->bindValue(':level_id', $level_id);
         $statement->bindValue(':name', $name);
         $statement->bindValue(':passport', $passport);

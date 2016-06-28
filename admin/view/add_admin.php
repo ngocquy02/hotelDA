@@ -1,16 +1,20 @@
 <?php
 	require_once('../include/config.php');
 	require_once('../include/admin_db.php');
+	require_once('../include/get_list.php');
 	require_once('../link.php');
 	session_start();
 	if (isset($_SESSION['email'])==NULL) {
 		header ("Location: $plink");
 	}
-	
+	$levels=get_level();
+	$cities=get_city();
+	$count=count(get_list_admin());
+	$count++;
 	require_once('menu.php');
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-	<form method="POST" action ="<?php echo $plink;?>/model/add_user.php" id="form">
+	<form method="POST" action ="<?php echo $plink;?>/model/add_admin.php" id="form">
 			<div class="row col-md-12">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -25,7 +29,7 @@
 				               <div class="col-md-6 form-group">
 				                <label for="2">Chức vụ</label>
 								<select class="form-control" id="2" name="level" required="">
-									<option value="">Chức vụ</option>
+									<option value="c">Chức vụ</option>
 									<?php foreach ($levels  as $level ):;?>
 									<option value="<?php echo $level['id'];?>"><?php echo $level['name'];?></option>
 									<?php endforeach;?>
@@ -39,9 +43,8 @@
 								<label for="4">Giới tính</label>
 								<select class="form-control" id="4" name="gender" required="">
 									<option value="">Giới tính</option>
-									<?php foreach ($genders  as $gender ):;?>
-									<option value="<?php echo $gender['id'];?>"><?php echo $gender['gender_name'];?></option>
-									<?php endforeach;?>
+									<option value="Nam">Nam</option>
+									<option value="Nữ">Nữ</option>
 								</select>
 				              </div>
 				              <div class="col-md-6 form-group">
@@ -67,8 +70,8 @@
 				                 <div class="col-md-6 form-group">
 								<label for="10">Thành phố</label>
 								<select class="form-control" id="10" name="city" required="">
-									<option value="">Thành phố</option>
-									<?php foreach ($citys  as $city ):;?>
+									<option value="c">Thành phố</option>
+									<?php foreach ($cities  as $city ):;?>
 									<option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
 									<?php endforeach;?>
 								</select>
