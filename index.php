@@ -17,9 +17,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Khách Sạn VQ</title>
-<link href="<?php echo $plink;?>img/favicon.ico" rel="shortcut icon">
-<link href="<?php echo $plink;?>css/styles.css" rel="stylesheet">
-<link href="<?php echo $plink;?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo $plink;?>admin/img/favicon.ico" rel="shortcut icon">
+<link href="admin/css/styles.css" rel="stylesheet">
+<link href="admin/css/system.css" rel="stylesheet">
+<link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
@@ -30,10 +31,10 @@
 <div>
 	<?php
 		include('admin/include/header.php');
-		include('admin/include/menu.php');
-		include('admin/include/booking.php');
-		include('admin/include/container.php');
-		include('admin/include/footer.php');
+		// include('admin/include/menu.php');
+		// include('admin/include/booking.php');
+		// include('admin/include/container.php');
+		// include('admin/include/footer.php');
 	?>
 </div>
 </body>
