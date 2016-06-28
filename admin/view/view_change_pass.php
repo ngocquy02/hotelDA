@@ -1,12 +1,13 @@
 <?php
 	require_once('../include/config.php');
+	require_once('../include/admin_db.php');
 	require_once('../link.php');
 	session_start();
 	if (isset($_SESSION['email'])==NULL) {
 		header ("Location: $plink");
 	}
 		require_once('menu.php');
-
+		$admin=get_admin($_SESSION['email']);
 
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -20,23 +21,23 @@
 				      <div class="panel-body">
 				              <div class="col-md-6 form-group">
 								<label for="sel10">Tên</label>
-								<input type="text" class="form-control" id="sel10" value="<?php echo $_SESSION['name'];?>"  disabled>
+								<input type="text" class="form-control" id="sel10" value="<?php echo $admin['name'];?>"  disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel12">Ngày sinh</label>
-								<input type="date" class="form-control" id="sel12" value="<?php echo $_SESSION['birth_day'];?>" disabled>
+								<input type="date" class="form-control" id="sel12" value="<?php echo $admin['birth_day'];?>" disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel13">Số chứng minh</label>
-								<input type="text" class="form-control" id="sel13" value="<?php echo $_SESSION['passport'];?>" disabled>
+								<input type="text" class="form-control" id="sel13" value="<?php echo $admin['passport'];?>" disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel14">Di động</label>
-								<input type="tel" class="form-control" id="sel14" value="<?php echo $_SESSION['phone'];?>" disabled>
+								<input type="tel" class="form-control" id="sel14" value="<?php echo $admin['phone'];?>" disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel15">Email</label>
-								<input type="email" class="form-control" id="sel15" value="<?php echo $_SESSION['email'];?>" disabled>
+								<input type="email" class="form-control" id="sel15" value="<?php echo $admin['email'];?>" disabled>
 				              </div>
 				               <div class="col-md-6 form-group">
 				                <label for="se15">Mật khẩu cũ</label>

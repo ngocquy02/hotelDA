@@ -22,11 +22,11 @@ function get_customer($customer_email) {
 function get_list_customer() {
     global $db;
     $query = '
-        SELECT * FROM gender, customer WHERE gender.id=customer_email.gender_id';
+        SELECT * FROM customer';
     try {
         $statement = $db->prepare($query);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {

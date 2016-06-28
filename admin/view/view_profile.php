@@ -59,7 +59,7 @@
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel17">Thành phố</label>
-								<select class="form-control" id="sel17" name="citys" required>
+								<select class="form-control" id="sel17" name="city" required>
 									<option value="">Thành phố</option>
 									<?php foreach ($cities as $city):;?>
 									<option value="<?php echo $city['id'];?>" <?php if ($admin['city_id']==$city['id']) {
