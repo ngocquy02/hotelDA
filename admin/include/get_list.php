@@ -187,5 +187,18 @@ function update_setting($title,$phone,$email,$fax,$adress,$city_id) {
         display_db_error($error_message);
     }
 }
+function update_view($view) {
+    global $db;
+    $query = 'UPDATE `hotel_option` SET `view`=:view WHERE id="1"';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':view', $view);
+        $statement->execute();
+        $statement->closeCursor();
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
 
 ?>

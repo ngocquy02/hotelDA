@@ -1,3 +1,16 @@
+<?php
+	require_once('admin/include/config.php');
+	require_once('admin/include/admin_db.php');
+	require_once('admin/include/get_list.php');
+	$setting=get_setting();
+	$view=$setting['view'];
+	$view++;
+	// update_view('10');
+	if (isset($_COOKIE['view'])==NULL) {
+		setcookie('view','view', time() + 60);
+		update_view($view);
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
