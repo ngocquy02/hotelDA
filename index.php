@@ -7,7 +7,7 @@
 	$view++;
 	// update_view('10');
 	if (isset($_COOKIE['view'])==NULL) {
-		setcookie('view','view', time() + 60);
+		setcookie('view','view', time() + 600);
 		update_view($view);
 	}
 ?>
