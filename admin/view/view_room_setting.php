@@ -24,8 +24,8 @@
 								<thead>
 									<tr>
 										<th class="col-md-1" style="list-style-type: none;text-align:center">Tên phòng</th>
-										<th class="col-md-2" style="list-style-type: none;text-align:center">Loại phòng</th>
-										<th class="col-md-1" style="list-style-type: none;text-align:center">Mô tả</th>
+										<th class="col-md-1" style="list-style-type: none;text-align:center">Loại phòng</th>
+										<th class="col-md-5" style="list-style-type: none;text-align:center">Mô tả</th>
 										<th class="col-md-1" style="list-style-type: none;text-align:center" >Giá</th>
 										<th class="col-md-1" style="list-style-type: none;text-align:center" >Tùy chọn</th>
 									</tr>
