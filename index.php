@@ -18,9 +18,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Khách Sạn VQ</title>
 <link href="<?php echo $plink;?>img/favicon.ico" rel="shortcut icon">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo $plink;?>css/styles.css" rel="stylesheet">
+<link href="<?php echo $plink;?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
@@ -30,11 +29,11 @@
 <body class="container">
 <div>
 	<?php
-		include('includes/header.php');
-		include('includes/menu.php');
-		include('includes/booking.php');
-		include('includes/container.php');
-		include('includes/footer.php');
+		include('admin/include/header.php');
+		include('admin/include/menu.php');
+		include('admin/include/booking.php');
+		include('admin/include/container.php');
+		include('admin/include/footer.php');
 	?>
 </div>
 </body>
