@@ -5,7 +5,6 @@
 		session_start();
 		if (isset($_SESSION['email'])==NULL) {
 			header ("Location: $plink");
-			$_SESSION['error'];
 	}
 		if (isset($_POST['submit'])) {
 			$email_admin=$_POST['email'];
@@ -18,7 +17,7 @@
 				$_SESSION['email']=$email_admin;
 				$_SESSION['password']=$pass_admin;
 				$_SESSION['name']=$users_admin['name'];
-				$_SESSION['gender']=$users_admin['gender_id'];
+				$_SESSION['gender']=$users_admin['gender'];
 				$_SESSION['birth_day']=$users_admin['birth_day'];
 				$_SESSION['phone']=$users_admin['phone'];
 				$_SESSION['adress']=$users_admin['adress'];

@@ -27,11 +27,8 @@
 				                <label for="sel11">Giới tính</label>
 								<select class="form-control" id="sel11" name="gender" required="">
 									<option value="">Giới tính</option>
-									<?php foreach ($genders  as $gender ):;?>
-									<option value="<?php echo $gender['id'];?>" <?php if ($_SESSION['gender']==$gender['id']) {
-										echo "selected";
-									};?>><?php echo $gender['gender_name'];?></option>
-									<?php endforeach;?>
+									<option value="Nam">Nam</option>
+									<option value="Nữ">Nữ</option>
 								</select>
 				              </div>
 				              <div class="col-md-6 form-group">

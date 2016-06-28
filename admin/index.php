@@ -42,8 +42,7 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" minlength="6" required>
 							</div>
-							<?php if(isset($_SESSION['error']))
-							{echo "<div class='alert alert-danger' role='alert' style='text-align:center'>Sai email hoặc mật khẩu</div>";};?>
+							
 							<div class="col-md-4">
 							</div>
 							<input type="submit" name="submit" class="col-md-4 btn btn-primary" value="Đăng nhập">
