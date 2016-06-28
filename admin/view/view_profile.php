@@ -62,7 +62,7 @@
 								<select class="form-control" id="sel17" name="citys" required>
 									<option value="">Thành phố</option>
 									<?php foreach ($cities as $city):;?>
-									<option value="<?php echo $city['id'];?>" <?php if ($_SESSION['city_id']==$city['id']) {
+									<option value="<?php echo $city['id'];?>" <?php if ($admin['city_id']==$city['id']) {
 										echo "selected";};?>><?php echo $city['name'];?></option>
 									<?php endforeach?>
 								</select>

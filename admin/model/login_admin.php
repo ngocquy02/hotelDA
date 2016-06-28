@@ -16,7 +16,6 @@
 				session_start();
 				$_SESSION['email']=$email_admin;
 				$_SESSION['level']=$users_admin['level_id'];
-				$_SESSION['city_id']=$users_admin['city_id'];
 				header("Location:$plink/controller/dashboard.php");
 }
 }
