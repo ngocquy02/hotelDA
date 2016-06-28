@@ -40,8 +40,8 @@
 										<td class="">
 											<li style="list-style-type: none;">
 												<a href="<?php echo $plink;?>/controller/edit_room_setting.php?id=<?php echo $room['id']?>" style="font-size:12px">
-													<svg class="glyph stroked clipboard with paper" style="height: 15;width:15;">
-													<use xlink:href="#stroked-clipboard-with-paper"/>
+													<svg class="glyph stroked pencil" style="height: 15;width:15;">
+													<use xlink:href="#stroked-pencil"/>
 													</svg>
 													Sửa
 												</a>
