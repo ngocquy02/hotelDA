@@ -7,7 +7,7 @@
 		header ("Location: $plink");
 	}
 		require_once('menu.php');
-		$admin=get_admin($_SESSION['email']);
+		$admin=get_admin_email($_SESSION['email']);
 
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">

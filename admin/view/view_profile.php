@@ -8,7 +8,7 @@
 		header ("Location: $plink");
 	}
 		require_once('menu.php');
-		$admin=get_admin($_SESSION['email']);
+		$admin=get_admin_email($_SESSION['email']);
 		$cities=get_city();
 ?>
 

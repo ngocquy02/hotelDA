@@ -1,6 +1,6 @@
 <?php
 
-function get_admin($admin_email) {
+function get_admin_email($admin_email) {
     global $db;
     $query = '
         SELECT *
@@ -18,6 +18,26 @@ function get_admin($admin_email) {
         display_db_error($error_message);
     }
 }
+
+function get_admin_id($id) {
+    global $db;
+    $query = '
+        SELECT *
+        FROM user_admin
+        WHERE id = :id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 
 function get_list_admin() {
     global $db;
@@ -101,12 +121,12 @@ function update_password($password,$email) {
     }
 }
 
-function delete_admin($email) {
+function delete_admin($id) {
     global $db;
-    $query = 'DELETE FROM user_admin WHERE email = :email';
+    $query = 'DELETE FROM user_admin WHERE id = :id';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':email', $email);
+        $statement->bindValue(':id', $id);
         $statement->execute();
         $statement->closeCursor();
     } catch (PDOException $e) {

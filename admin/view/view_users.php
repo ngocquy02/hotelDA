@@ -2,9 +2,9 @@
 	require_once('../include/config.php');
 	require_once('../include/admin_db.php');
 	require_once('../link.php');
-	$users_admin=get_list_admin();
+	$admin=get_list_admin();
 	session_start();
-	if (isset($_SESSION['email'])==NULL) {
+	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
 		header ("Location: $plink");
 	}
 	require_once('menu.php');
@@ -31,7 +31,7 @@
 									</tr>
 								</thead>
 								<tbody>
-								<?php foreach ($users_admin as $users):?>
+								<?php foreach ($admin as $users):?>
 									<tr>
 										<th scope="row" style="list-style-type: none;text-align:center"><?php echo $users['employee_number']?></th>
 										<td style="list-style-type: none;text-align:center" charset=utf-8><?php echo $users['name']?></td>

@@ -10,7 +10,7 @@
 			$email_admin=$_POST['email'];
 			$pass_admin =$_POST['password'];
 			$pass_admin = md5($pass_admin);
-			$users_admin=get_admin($email_admin);
+			$users_admin=get_admin_email($email_admin);
 			var_dump($users_admin);
 			if ($email_admin==$users_admin['email'] && $pass_admin==$users_admin['password']) {
 				session_start();
