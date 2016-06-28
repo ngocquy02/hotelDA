@@ -6,7 +6,7 @@
 		if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
 			header ("Location: $plink");
 	}
-    add_room($_POST['name'],$_POST['type_room'],$_POST['img'],$_POST['price'],$_POST['description']);	
+    add_room($_POST['name'],$_POST['type_room'],$_POST['img'],$_POST['description'],$_POST['price']);	
     
 	header ("Location: $plink/controller/room_setting.php");
 
