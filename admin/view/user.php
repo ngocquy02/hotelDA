@@ -4,7 +4,7 @@
 	require_once('../include/get_list.php');
 	require_once('../link.php');
 	session_start();
-	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
+	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1' ||isset($_GET['id'])==NULL) {
 		header ("Location: $plink");
 	}
 	require_once('menu.php');
