@@ -29,7 +29,7 @@
 				               <div class="col-md-6 form-group">
 				                <label for="2">Chức vụ</label>
 								<select class="form-control" id="2" name="level" required="">
-									<option value="c">Chức vụ</option>
+									<option value="">Chức vụ</option>
 									<?php foreach ($levels  as $level ):;?>
 									<option value="<?php echo $level['id'];?>"><?php echo $level['name'];?></option>
 									<?php endforeach;?>
@@ -40,7 +40,7 @@
 								<input type="text" class="form-control" id="3" name="employee_number" value="<?php echo "MS-".$count;?>">
 				              </div>
 				              <div class="col-md-6 form-group">
-								<label for="4">Giới tính</label>
+								<label for="">Giới tính</label>
 								<select class="form-control" id="4" name="gender" required="">
 									<option value="">Giới tính</option>
 									<option value="Nam">Nam</option>
@@ -70,7 +70,7 @@
 				                 <div class="col-md-6 form-group">
 								<label for="10">Thành phố</label>
 								<select class="form-control" id="10" name="city" required="">
-									<option value="c">Thành phố</option>
+									<option value="">Thành phố</option>
 									<?php foreach ($cities  as $city ):;?>
 									<option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
 									<?php endforeach;?>

@@ -15,15 +15,8 @@
 			if ($email_admin==$users_admin['email'] && $pass_admin==$users_admin['password']) {
 				session_start();
 				$_SESSION['email']=$email_admin;
-				$_SESSION['password']=$pass_admin;
-				$_SESSION['name']=$users_admin['name'];
-				$_SESSION['gender']=$users_admin['gender'];
-				$_SESSION['birth_day']=$users_admin['birth_day'];
-				$_SESSION['phone']=$users_admin['phone'];
-				$_SESSION['adress']=$users_admin['adress'];
-				$_SESSION['passport']=$users_admin['passport'];
-				$_SESSION['city']=$users_admin['city'];
 				$_SESSION['level']=$users_admin['level_id'];
+				$_SESSION['city_id']=$users_admin['city_id'];
 				header("Location:$plink/controller/dashboard.php");
 }
 }
