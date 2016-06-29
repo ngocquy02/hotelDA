@@ -4,7 +4,7 @@
 	require_once('../include/get_list.php');
 	require_once('../link.php');
 	session_start();
-	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1' || isset($_GET['id'])==NULL) {
+	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1' || isset($_GET['id'])==NULL ||isset($room['id'])==NULL) {
 		header ("Location: $plink");
 	}
 	require_once('menu.php');
@@ -41,7 +41,7 @@
 								<input type="text" class="form-control" id="sel15" name="img" value="<?php echo $room['img'];?>" required>
 				              </div>
 				               <div class="col-md-6 form-group">
-				                <label for="sel16">Giá</label>
+				                <label for="sel16">Giá (VNĐ)</label>
 								<input type="text" class="form-control" id="sel16" name="price" value="<?php echo $room['price'];?>" required>
 				              </div>
 				              <div class="col-md-12 form-group">

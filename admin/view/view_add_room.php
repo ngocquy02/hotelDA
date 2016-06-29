@@ -37,7 +37,7 @@
 								<input type="text" class="form-control" id="sel15" name="img" required>
 				              </div>
 				               <div class="col-md-6 form-group">
-				                <label for="sel16">Giá</label>
+				                <label for="sel16">Giá (VNĐ)</label>
 								<input type="text" class="form-control" id="sel16" name="price" required>
 				              </div>
 				              <div class="col-md-12 form-group">

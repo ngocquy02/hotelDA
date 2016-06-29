@@ -1,8 +1,7 @@
 <?php
-	
-	$link='/hotelDA';
-
-//
+	require_once('include/config.php');
+	require_once('include/get_list.php');
+	$option=get_setting();
 	$a='/admin';
-	$plink=$link.$a;
+	$plink=$option['link'].$a;
 ?>

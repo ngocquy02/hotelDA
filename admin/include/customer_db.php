@@ -19,6 +19,25 @@ function get_customer($customer_email) {
     }
 }
 
+function get_customer_id($id) {
+    global $db;
+    $query = '
+        SELECT *
+        FROM customer
+        WHERE id = :id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 function get_list_customer() {
     global $db;
     $query = '

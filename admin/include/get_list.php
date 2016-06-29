@@ -152,6 +152,7 @@ function get_city_id($id) {
     }
 }
 
+
 function get_setting() {
     global $db;
     $query = '

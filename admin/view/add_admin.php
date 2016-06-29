@@ -7,11 +7,11 @@
 	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
 		header ("Location: $plink");
 	}
+	require_once('menu.php');
 	$levels=get_level();
 	$cities=get_city();
 	$count=count(get_list_admin());
 	$count++;
-	require_once('menu.php');
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 	<form method="POST" action ="<?php echo $plink;?>/model/add_admin.php" id="form">

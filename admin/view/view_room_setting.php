@@ -26,7 +26,7 @@
 										<th class="col-md-1" style="list-style-type: none;text-align:center">Tên phòng</th>
 										<th class="col-md-1" style="list-style-type: none;text-align:center">Loại phòng</th>
 										<th class="col-md-5" style="list-style-type: none;text-align:center">Mô tả</th>
-										<th class="col-md-1" style="list-style-type: none;text-align:center" >Giá</th>
+										<th class="col-md-1" style="list-style-type: none;text-align:center" >Giá (VNĐ)</th>
 										<th class="col-md-1" style="list-style-type: none;text-align:center" >Tùy chọn</th>
 									</tr>
 								</thead>
@@ -36,7 +36,7 @@
 										<th scope="row" style="list-style-type: none;text-align:center"><?php echo $room['name']?></th>
 										<td style="list-style-type: none;text-align:center"><?php $type=get_room_type_id($room['room_type_id']);echo $type['name']?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $room['description']?></td>
-										<td style="list-style-type: none;text-align:center"><?php echo $room['price']." (VNĐ)";?></td>
+										<td style="list-style-type: none;text-align:center"><?php echo $room['price'];?></td>
 										<td class="">
 											<li style="list-style-type: none;">
 												<a href="<?php echo $plink;?>/controller/edit_room_setting.php?id=<?php echo $room['id']?>" style="font-size:12px">
