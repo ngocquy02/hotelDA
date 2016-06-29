@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Jun 28, 2016 at 02:14 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.6.15
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `hotel_2`
 --
@@ -119,6 +101,13 @@ CREATE TABLE `customer` (
   `city_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `name`, `birth_day`, `passport`, `email`, `password`, `phone`, `gender`, `adress`, `city_id`) VALUES
+(1, 'Nguyễn ngọc Quý', '0000-00-00', '1', '1', '1', '1', '1', '1', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -142,7 +131,7 @@ CREATE TABLE `hotel_option` (
 --
 
 INSERT INTO `hotel_option` (`id`, `link`, `title`, `phone`, `fax`, `email`, `city_id`, `adress`, `view`) VALUES
-(1, '', 'Ngá»c QuÃ½', '0972484063', '0972484063', 'nguyenngocquy020196@gmail.com', 41, 'KrÃ´ng BÃ´ng', 16);
+(1, '/hotelDA', 'Ngá»c QuÃ½', '0972484063', '0972484063', 'nguyenngocquy020196@gmail.com', 41, 'KrÃ´ng BÃ´ng', 31);
 
 -- --------------------------------------------------------
 
@@ -183,16 +172,7 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `name`, `room_type_id`, `img`, `description`, `price`) VALUES
-(1, 'P101', 0, '', '', '0'),
-(2, 'P102', 0, '', '', '0'),
-(3, 'P103', 0, '', '', '0'),
-(4, 'P104', 0, '', '', '0'),
-(5, 'P105', 0, '', '', '0'),
-(6, 'P106', 0, '', '', '0'),
-(7, 'P107', 0, '', '', '0'),
-(8, 'P108', 0, '', '', '0'),
-(9, 'P109', 0, '', '', '0'),
-(10, 'P110', 0, '', '', '0');
+(1, 'P101', 2, 'dddd', 'jhÆ°Ã¨uwegfÆ°\r\n\r\n', '656');
 
 -- --------------------------------------------------------
 
@@ -212,6 +192,13 @@ CREATE TABLE `room_order` (
   `price` decimal(10,0) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `room_order`
+--
+
+INSERT INTO `room_order` (`id`, `room_id`, `status_id`, `note`, `date_check_in`, `date_checkout`, `date_order`, `customer_id`, `price`, `quantity`) VALUES
+(1, 1, 1, '1', '0000-00-00', '0000-00-00', '0000-00-00', 1, '2000', 1);
 
 -- --------------------------------------------------------
 
@@ -238,6 +225,14 @@ CREATE TABLE `room_type` (
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `room_type`
+--
+
+INSERT INTO `room_type` (`id`, `name`) VALUES
+(1, 'Đôi'),
+(2, 'Đơn');
+
 -- --------------------------------------------------------
 
 --
@@ -261,6 +256,14 @@ CREATE TABLE `status_room` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `status_room`
+--
+
+INSERT INTO `status_room` (`id`, `name`) VALUES
+(1, 'Trống'),
+(2, 'Có khách');
 
 -- --------------------------------------------------------
 
@@ -288,8 +291,8 @@ CREATE TABLE `user_admin` (
 --
 
 INSERT INTO `user_admin` (`id`, `adress`, `birth_day`, `city_id`, `email`, `gender`, `level_id`, `name`, `passport`, `password`, `phone`, `employee_number`) VALUES
-(1, 'KrÃ´ng BÃ´ng', '1996-01-02', 41, 'quykrb159@gmail.com', 'Nam', 1, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-1'),
-(12, 'KrÃ´ng BÃ´ng', '1996-01-02', 41, 'admin@gmail.com', 'Nam', 2, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-1');
+(14, 'quykrb159@gmail.com', '1996-01-02', 41, 'nguyenngocquy020196@gmail.com', 'Nam', 1, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-1'),
+(15, 'f@gmail.com', '1996-01-02', 14, 'admin@gmail.com', 'Nam', 2, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-2');
 
 --
 -- Indexes for dumped tables
@@ -381,7 +384,7 @@ ALTER TABLE `city`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `hotel_option`
 --
@@ -391,17 +394,17 @@ ALTER TABLE `hotel_option`
 -- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `room_order`
 --
 ALTER TABLE `room_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `room_service`
 --
@@ -411,7 +414,7 @@ ALTER TABLE `room_service`
 -- AUTO_INCREMENT for table `room_type`
 --
 ALTER TABLE `room_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `service`
 --
@@ -421,12 +424,12 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `status_room`
 --
 ALTER TABLE `status_room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user_admin`
 --
 ALTER TABLE `user_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
