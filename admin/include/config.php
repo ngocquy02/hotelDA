@@ -1,15 +1,22 @@
 <?php
-// Set up the database connection
-$dsn = 'mysql:host=localhost;dbname=hotel_2';
-$username = 'root';
-$password = '';
-$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-try {
-    $db = new PDO($dsn, $username, $password, $options);
-} catch (PDOException $e) {
-    $error_message = $e->getMessage();
-    echo "DATA BASE CONNECTION ERROR </br>";
-    echo $error_message;
-    exit();
+//Set up the database connection
+
+$mysql_username = "root";
+$mysql_password = "";
+$mysql_host = "localhost";
+$mysql_database = "hotel_2";
+
+try
+{
+    //connect
+    global $db;
+    $db = new PDO('mysql:dbname=' . $mysql_database . ';host=' . $mysql_host . ';charset=utf8;', $mysql_username, $mysql_password);
+    $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $ex)
+{
+    die("Unable Connect To DataBase");
 }
 ?>
