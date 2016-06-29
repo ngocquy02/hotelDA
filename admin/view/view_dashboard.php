@@ -2,6 +2,7 @@
 	require_once('../include/config.php');
 	require_once('../include/admin_db.php');
 	require_once('../include/get_list.php');
+	require_once('../include/room_db.php');
 	require_once('../link.php');
  	session_start();
 	if (isset($_SESSION['email'])==NULL) {
@@ -9,6 +10,7 @@
 	}
 		require_once('menu.php');
 		$setting=get_setting();
+		$count=count(get_list_room());
 ?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -26,7 +28,7 @@
 							<svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">120</div>
+							<div class="large"><?php echo $count;?></div>
 							<div class="text-muted">Số phòng</div>
 						</div>
 					</div>

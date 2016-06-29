@@ -34,7 +34,7 @@
 								<?php foreach ($admin as $users):?>
 									<tr>
 										<th scope="row" style="list-style-type: none;text-align:center"><?php echo $users['employee_number']?></th>
-										<td style="list-style-type: none;text-align:center" charset=utf-8><?php echo $users['name']?></td>
+										<td style="list-style-type: none;text-align:center"><?php echo $users['name']?></td>
 										<td type='date' style="list-style-type: none;text-align:center"><?php echo date('d/m/Y',strtotime($users['birth_day']));?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $users['gender'];?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $users['phone']?></td>
@@ -74,4 +74,3 @@
 	</div>
 		</body>
 		</html>
-?>

@@ -35,7 +35,7 @@ function get_list_room() {
     }
 }
 
-function add_room($name,$adress,$birth_day,$city_id,$email,$gender,$level_id,$password,$passport,$phone,$employee_number) {
+function add_room($name,$room_type_id,$img,$description,$price) {
     global $db;
     $query = 'INSERT INTO room
                  (`name`, `room_type_id`, `img`, `description`, `price`)
@@ -60,18 +60,17 @@ function add_room($name,$adress,$birth_day,$city_id,$email,$gender,$level_id,$pa
     }
 }
 
-function update_admin($name,$adress,$birth_day,$city_id,$email,$gender,$phone) {
+function update_room($id,$name,$room_type_id,$img,$description,$price) {
     global $db;
-    $query = 'UPDATE `user_admin` SET `adress`=:adress,`birth_day`=:birth_day,`city_id`=:city_id,`gender`=:gender,`name`=:name,`phone`=:phone WHERE email=:email';
+    $query = 'UPDATE `room` SET `name`=:name,`room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':adress', $adress);
-        $statement->bindValue(':birth_day', $birth_day);
-        $statement->bindValue(':city_id', $city_id);
-        $statement->bindValue(':email', $email);
-        $statement->bindValue(':gender', $gender);
         $statement->bindValue(':name', $name);
-        $statement->bindValue(':phone', $phone);
+        $statement->bindValue(':room_type_id', $room_type_id);
+        $statement->bindValue(':img', $img);
+        $statement->bindValue(':description', $description);
+        $statement->bindValue(':price', $price);
+        $statement->bindValue(':id', $id);
         $statement->execute();
         $statement->closeCursor();
     } catch (PDOException $e) {
@@ -80,24 +79,9 @@ function update_admin($name,$adress,$birth_day,$city_id,$email,$gender,$phone) {
     }
 }
 
-function update_password($password,$email) {
+function delete_room($id) {
     global $db;
-    $query = 'UPDATE `user_admin` SET `password`=:password WHERE email=:email';
-    try {
-        $statement = $db->prepare($query);
-        $statement->bindValue(':email', $email);
-        $statement->bindValue(':password', $password);
-        $statement->execute();
-        $statement->closeCursor();
-    } catch (PDOException $e) {
-        $error_message = $e->getMessage();
-        display_db_error($error_message);
-    }
-}
-
-function delete_admin($id) {
-    global $db;
-    $query = 'DELETE FROM user_admin WHERE id = :id';
+    $query = 'DELETE FROM room WHERE id = :id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $id);
@@ -108,7 +92,5 @@ function delete_admin($id) {
         display_db_error($error_message);
     }
 }
-
-?>
 
 ?>
