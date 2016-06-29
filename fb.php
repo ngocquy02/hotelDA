@@ -30,8 +30,5 @@
 
 <div class="fb-comments" data-href="http://localhost/hotelDA" data-width="comments" data-numposts="5"></div>
 
-
-<div class="fb-comments" data-href="http://localhost/hotelDA/ss" data-width="comments" data-numposts="5"></div>
-
 </body>
 </html>
