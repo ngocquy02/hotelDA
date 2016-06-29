@@ -1,3 +1,21 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 29, 2016 at 02:24 PM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Database: `hotel_2`
 --
@@ -9,78 +27,78 @@
 --
 
 CREATE TABLE `city` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL
+  `name` varchar(100) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `city`
 --
 
-INSERT INTO `city` (`id`, `name`) VALUES
-(1, 'HÃ  Ná»™i'),
-(2, 'HÃ  Giang'),
-(3, 'Cao Báº±ng'),
-(4, 'Báº¯c Káº¡n'),
-(5, 'TuyÃªn Quang'),
-(6, 'LÃ o Cai'),
-(7, 'Äiá»‡n BiÃªn'),
-(8, 'Lai ChÃ¢u'),
-(9, 'SÆ¡n La'),
-(10, 'YÃªn BÃ¡i'),
-(11, 'HÃ²a BÃ¬nh'),
-(12, 'ThÃ¡i NguyÃªn'),
-(13, 'Láº¡ng SÆ¡n'),
-(14, 'Báº¯c Giang'),
-(15, 'PhÃº Thá»'),
-(16, 'VÄ©nh PhÃºc'),
-(17, 'Báº¯c Ninh'),
-(18, 'Háº£i DÆ°Æ¡ng'),
-(19, 'Háº£i PhÃ²ng'),
-(20, 'HÆ°ng YÃªn'),
-(21, 'ThÃ¡i BÃ¬nh'),
-(22, 'HÃ  Nam'),
-(23, 'Nam Äá»‹nh'),
-(24, 'Ninh BÃ¬nh'),
-(25, 'Thanh HÃ³a'),
-(26, 'Nghá»‡ An'),
-(27, 'HÃ  TÄ©nh'),
-(28, 'Quáº£ng BÃ¬nh'),
-(29, 'Quáº£ng Trá»‹'),
-(30, 'Thá»«a ThiÃªn Huáº¿'),
-(31, 'ÄÃ  Náºµng'),
-(32, 'Quáº£ng Nam'),
-(33, 'Quáº£ng NgÃ£i'),
-(34, 'BÃ¬nh Äá»‹nh'),
-(35, 'PhÃº YÃªn'),
-(36, 'KhÃ¡nh HÃ²a'),
-(37, 'Ninh Thuáº­n'),
-(38, 'BÃ¬nh Thuáº­n'),
-(39, 'Kon Tum'),
-(40, 'Gia Lai'),
-(41, 'Äáº¯k Láº¯k'),
-(42, 'Äáº¯k NÃ´ng'),
-(43, 'LÃ¢m Äá»“ng'),
-(44, 'BÃ¬nh PhÆ°á»›c'),
-(45, 'TÃ¢y Ninh'),
-(46, 'BÃ¬nh DÆ°Æ¡ng'),
-(47, 'Äá»“ng Nai'),
-(48, 'BÃ  Rá»‹a - VÅ©ng TÃ u'),
-(49, 'Há»“ ChÃ­ Minh'),
-(50, 'Long An'),
-(51, 'Tiá»n Giang'),
-(52, 'Báº¿n Tre'),
-(53, 'TrÃ  Vinh'),
-(54, 'VÄ©nh Long'),
-(55, 'Äá»“ng ThÃ¡p'),
-(56, 'An Giang'),
-(57, 'KiÃªn Giang'),
-(58, 'Cáº§n ThÆ¡'),
-(59, 'Háº­u Giang'),
-(60, 'SÃ³c TrÄƒng'),
-(61, 'Báº¡c LiÃªu'),
-(62, 'CÃ  Mau'),
-(63, 'Quáº£ng Ninh');
+INSERT INTO `city` (`name`, `id`) VALUES
+('Hà Nội', 1),
+('Hà Giang', 2),
+('Cao Bằng', 3),
+('Bắc Kạn', 4),
+('Tuyên Quang', 5),
+('Lào Cai', 6),
+('Điện Biên', 7),
+('Lai Châu', 8),
+('Sơn La', 9),
+('Yên Bái', 10),
+('Hòa Bình', 11),
+('Thái Nguyên', 12),
+('Lạng Sơn', 13),
+('Quảng Ninh', 14),
+('Bắc Giang', 15),
+('Phú Thọ', 16),
+('Vĩnh Phúc', 17),
+('Bắc Ninh', 18),
+('Hải Dương', 19),
+('Hải Phòng', 20),
+('Hưng Yên', 21),
+('Thái Bình', 22),
+('Hà Nam', 23),
+('Nam Định', 24),
+('Ninh Bình', 25),
+('Thanh Hóa', 26),
+('Nghệ An', 27),
+('Hà Tĩnh', 28),
+('Quảng Bình', 29),
+('Quảng Trị', 30),
+('Thừa Thiên Huế', 31),
+('Đà Nẵng', 32),
+('Quảng Nam', 33),
+('Quảng Ngãi', 34),
+('Bình Định', 35),
+('Phú Yên', 36),
+('Khánh Hòa', 37),
+('Ninh Thuận', 38),
+('Bình Thuận', 39),
+('Kon Tum', 40),
+('Gia Lai', 41),
+('Đắk Lắk', 42),
+('Đắk Nông', 43),
+('Lâm Đồng', 44),
+('Bình Phước', 45),
+('Tây Ninh', 46),
+('Bình Dương', 47),
+('Đồng Nai', 48),
+('Bà Rịa - Vũng Tàu', 49),
+('Hồ Chí Minh', 50),
+('Long An', 51),
+('Tiền Giang', 52),
+('Bến Tre', 53),
+('Trà Vinh', 54),
+('Vĩnh Long', 55),
+('Đồng Tháp', 56),
+('An Giang', 57),
+('Kiên Giang', 58),
+('Cần Thơ', 59),
+('Hậu Giang', 60),
+('Sóc Trăng', 61),
+('Bạc Liêu', 62),
+('Cà Mau', 63);
 
 -- --------------------------------------------------------
 
@@ -106,7 +124,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `name`, `birth_day`, `passport`, `email`, `password`, `phone`, `gender`, `adress`, `city_id`) VALUES
-(1, 'Nguyễn ngọc Quý', '0000-00-00', '1', '1', '1', '1', '1', '1', 1);
+(1, 'Nguyễn Ngọc Quý', '1996-02-01', '241546874', 'admin@gmail.com', '1', '0972484063', 'Nam', 'Krông Bông', 1);
 
 -- --------------------------------------------------------
 
@@ -131,7 +149,7 @@ CREATE TABLE `hotel_option` (
 --
 
 INSERT INTO `hotel_option` (`id`, `link`, `title`, `phone`, `fax`, `email`, `city_id`, `adress`, `view`) VALUES
-(1, '/hotelDA', 'Ngá»c QuÃ½', '0972484063', '0972484063', 'nguyenngocquy020196@gmail.com', 41, 'KrÃ´ng BÃ´ng', 31);
+(1, '/hotelDA', 'HOTEL', '0972484063', '0972484063', 'nguyenngocquy020196@gmail.com', 41, 'Krông Bông', 42);
 
 -- --------------------------------------------------------
 
@@ -149,8 +167,8 @@ CREATE TABLE `level` (
 --
 
 INSERT INTO `level` (`id`, `name`) VALUES
-(1, 'Quáº£n trá»‹ viÃªn'),
-(2, 'NhÃ¢n viÃªn');
+(1, 'Quản trị viên'),
+(2, 'Nhân viên');
 
 -- --------------------------------------------------------
 
@@ -166,13 +184,6 @@ CREATE TABLE `room` (
   `description` text NOT NULL,
   `price` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `room`
---
-
-INSERT INTO `room` (`id`, `name`, `room_type_id`, `img`, `description`, `price`) VALUES
-(1, 'P101', 2, 'dddd', 'jhÆ°Ã¨uwegfÆ°\r\n\r\n', '656');
 
 -- --------------------------------------------------------
 
@@ -291,8 +302,8 @@ CREATE TABLE `user_admin` (
 --
 
 INSERT INTO `user_admin` (`id`, `adress`, `birth_day`, `city_id`, `email`, `gender`, `level_id`, `name`, `passport`, `password`, `phone`, `employee_number`) VALUES
-(14, 'quykrb159@gmail.com', '1996-01-02', 41, 'nguyenngocquy020196@gmail.com', 'Nam', 1, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-1'),
-(15, 'f@gmail.com', '1996-01-02', 14, 'admin@gmail.com', 'Nam', 2, 'Nguyá»…n Ngá»c QuÃ½', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-2');
+(14, 'Krông Bông', '1996-01-02', 41, 'nguyenngocquy020196@gmail.com', 'Nam', 1, 'Nguyễn Ngọc Quý', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-1'),
+(16, 'Krông Bông', '1996-01-02', 42, 'admin@gmail.com', 'Nam', 2, 'Nguyễn Ngọc Quý', '241546874', '66e5b3122cd3ca622480084c88de510a', '0972484063', 'MS-2');
 
 --
 -- Indexes for dumped tables
@@ -399,7 +410,7 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `room_order`
 --
@@ -429,7 +440,7 @@ ALTER TABLE `status_room`
 -- AUTO_INCREMENT for table `user_admin`
 --
 ALTER TABLE `user_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
