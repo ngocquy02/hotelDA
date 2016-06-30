@@ -10,7 +10,7 @@
 	}
 
 	require_once('menu.php');
-	$room_type=get_list_room();
+	$room_type=get_room_type();
 ?>
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-9 col-lg-offset-3 main">
@@ -27,7 +27,7 @@
 								<select class="form-control" id="sel17" name="type_room" required>
 									<option value="">Loại phòng</option>
 									<?php foreach ($room_type as $type):;?>
-									<option value="<?php echo $type['room_type'];?>"><?php echo $type['room_type']?></option>
+									<option value="<?php echo $type['id'];?>"><?php echo $type['name']?></option>
 									<?php endforeach?>
 								</select>
 				              </div>

@@ -38,7 +38,7 @@ $get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checko
 								<?php foreach ($get_result_search as $room):?>
 									<tr>
 										<th scope="row" style="list-style-type: none;text-align:center"><?php echo $room['name']?></th>
-										<td style="list-style-type: none;text-align:center"><?php echo $room['room_type']?></td>
+										<td style="list-style-type: none;text-align:center"><?php $type = get_room_type_id($room['room_type_id']);echo $type['name'] ?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $room['description']?></td>
 										<td style="list-style-type: none;text-align:center"><?php echo $room['price'];?></td>
 										<td class="">

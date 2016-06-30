@@ -213,14 +213,14 @@ function delete_room_order($id) {
     }
 }
 
-function get_result_search($date_check_in,$date_checkout,$room_type) {
+function get_result_search($date_check_in,$date_checkout,$room_type_id) {
     global $db;
-    $query = 'SELECT * FROM room WHERE id NOT IN (SELECT room_id FROM room_order WHERE date_check_in >= :date_check_in AND date_checkout <= :date_checkout) AND room_type=:room_type';
+    $query = 'SELECT * FROM room WHERE id NOT IN (SELECT room_id FROM room_order WHERE date_check_in >= :date_check_in AND date_checkout <= :date_checkout) AND room_type_id=:room_type_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':date_check_in', $date_check_in);
         $statement->bindValue(':date_checkout', $date_checkout);
-        $statement->bindValue(':room_type', $room_type);
+        $statement->bindValue(':room_type_id', $room_type_id);
         $statement->execute();
         $result = $statement->fetchAll();
         $statement->closeCursor();

@@ -221,6 +221,24 @@ function get_room_type() {
     }
 }
 
+function get_room_type_id($id) {
+    global $db;
+    $query = '
+        SELECT *
+        FROM room_type WHERE id=:id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 function add_room_type($name) {
     global $db;
     $query = 'INSERT INTO room_type
