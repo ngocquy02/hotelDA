@@ -10,7 +10,11 @@
 	}
 $get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checkout'],$_POST['type_room']);
 	require_once('menu.php');
-
+	$_SESSION['date_check_in']=$_POST['date_check_in'];
+	$_SESSION['date_checkout']=$_POST['date_checkout'];
+	$_SESSION['type_room']=$_POST['type_room'];
+	$_SESSION['childent']=$_POST['childent'];
+	$_SESSION['adults']=$_POST['adults'];
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 			<div class="row col-md-12">

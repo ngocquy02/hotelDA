@@ -54,19 +54,19 @@ function get_list_customer() {
     }
 }
 
-function add_customer($name,$adress,$birth_day,$city,$email,$gender_id,$password,$passport,$phone) {
+function add_customer($name,$adress,$birth_day,$city,$email,$gender,$password,$passport,$phone) {
     global $db;
     $query = 'INSERT INTO customer
-                 (`name`, `birth_day`, `passport`, `email`, `password`, `phone`, `gender_id`, `adress`, `city`)
+                 (`name`, `birth_day`, `passport`, `email`, `password`, `phone`, `gender`, `adress`, `city`)
               VALUES
-                 (:name, :birth_day, :passport, :email, :password, :phone, :gender_id, :adress, :city)';
+                 (:name, :birth_day, :passport, :email, :password, :phone, :gender, :adress, :city)';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':adress', $adress);
         $statement->bindValue(':birth_day', $birth_day);
         $statement->bindValue(':city', $city);
         $statement->bindValue(':email', $email);
-        $statement->bindValue(':gender_id', $gender_id);
+        $statement->bindValue(':gender', $gender);
         $statement->bindValue(':name', $name);
         $statement->bindValue(':passport', $passport);
         $statement->bindValue(':password', $password);
@@ -82,6 +82,35 @@ function add_customer($name,$adress,$birth_day,$city,$email,$gender_id,$password
         display_db_error($error_message);
     }
 }
+
+function add_customer_order($name,$adress,$birth_day,$city,$email,$gender,$passport,$phone) {
+    global $db;
+    $query = 'INSERT INTO customer
+                 (`name`, `birth_day`, `passport`, `email`, `phone`, `gender`, `adress`, `city_id`)
+              VALUES
+                 (:name, :birth_day, :passport, :email, :phone, :gender, :adress, :city)';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':adress', $adress);
+        $statement->bindValue(':birth_day', $birth_day);
+        $statement->bindValue(':city', $city);
+        $statement->bindValue(':email', $email);
+        $statement->bindValue(':gender', $gender);
+        $statement->bindValue(':name', $name);
+        $statement->bindValue(':passport', $passport);
+        $statement->bindValue(':phone', $phone);
+        $statement->execute();
+        $statement->closeCursor();
+
+        // Get the last product ID that was automatically generated
+        $category_id = $db->lastInsertId();
+        return $category_id;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 
 function update_customer($email, $password) {
     global $db;

@@ -16,7 +16,7 @@
 				<div class="right col-lg-12">
 				  <section class="panel">
 				      <header class="panel-heading" style="text-align:center">
-				          Quản lí users
+				          Quản lí khách hàng
 				      </header>
 						<div class="panel-body table-responsive">
 							<table class="table">
