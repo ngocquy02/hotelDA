@@ -62,8 +62,8 @@
 			<li><a href="<?php echo $plink;?>/controller/customers.php"><svg class="glyph stroked female user"><use xlink:href="#stroked-female-user"></use></svg>Thông tin khách hàng</a></li>
 			<li><a href="<?php echo $plink;?>/controller/room.php"><svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content"></use></svg>Thông tin đặt phòng</a></li>
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/room_setting.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Quản lí phòng</a></li>
-			<li><a href="<?php echo $plink;?>/controller/form.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Đặt phòng</a></li>
-			<li><a href="<?php echo $plink;?>/controller/statistical.php"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Thống kê</a></li>
+			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Đặt phòng</a></li>
+			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Thống kê</a></li>
 			<li><a href="<?php echo $plink;?>/controller/user.php""><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Báo cáo</a></li>
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/setting.php"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg>Cài đặt</a></li>
 		</ul>
