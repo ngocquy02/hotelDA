@@ -1,13 +1,5 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/get_list.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
-		header ("Location: $plink");
-	}
-	require_once('menu.php');
-	$room_type=get_room_type()
+	
 	?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
@@ -25,7 +17,7 @@
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel17">Loại phòng</label>
-								<select class="form-control" id="sel17" name="city" required>
+								<select class="form-control" id="sel17" name="type_room" required>
 									<option value="">Loại phòng</option>
 									<?php foreach ($room_type as $type):;?>
 									<option value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>

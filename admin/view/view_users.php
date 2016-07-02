@@ -1,13 +1,5 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/admin_db.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
-		header ("Location: $plink");
-	}
-	require_once('menu.php');
-	$admin=get_list_admin();
+	
 ?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">

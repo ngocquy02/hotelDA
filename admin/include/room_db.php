@@ -35,16 +35,16 @@ function get_list_room() {
     }
 }
 
-function add_room($name,$room_type,$img,$description,$price) {
+function add_room($name,$room_type_id,$img,$description,$price) {
     global $db;
     $query = 'INSERT INTO room
-                 (`name`, `room_type`, `img`, `description`, `price`)
+                 (`name`, `room_type_id`, `img`, `description`, `price`)
               VALUES
-                 (:name, :room_type, :img, :description, :price)';
+                 (:name, :room_type_id, :img, :description, :price)';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':name', $name);
-        $statement->bindValue(':room_type', $room_type);
+        $statement->bindValue(':room_type_id', $room_type_id);
         $statement->bindValue(':img', $img);
         $statement->bindValue(':description', $description);
         $statement->bindValue(':price', $price);
@@ -62,11 +62,11 @@ function add_room($name,$room_type,$img,$description,$price) {
 
 function update_room($id,$name,$room_type,$img,$description,$price) {
     global $db;
-    $query = 'UPDATE `room` SET `name`=:name,`room_type`=:room_type,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
+    $query = 'UPDATE `room` SET `name`=:name,`room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':name', $name);
-        $statement->bindValue(':room_type', $room_type);
+        $statement->bindValue(':room_type_id', $room_type_id);
         $statement->bindValue(':img', $img);
         $statement->bindValue(':description', $description);
         $statement->bindValue(':price', $price);
@@ -215,18 +215,44 @@ function delete_room_order($id) {
 
 function get_result_search($date_check_in,$date_checkout,$room_type_id) {
     global $db;
-    $query = 'SELECT * FROM room WHERE id NOT IN (SELECT room_id FROM room_order WHERE date_check_in >= :date_check_in AND date_checkout <= :date_checkout) AND room_type_id=:room_type_id';
+    $query = 'SELECT * FROM room WHERE id NOT IN (
+        SELECT `room_order`.id FROM `room_order` WHERE
+            (date_check_in >= :date_check_in AND date_check_in <= :date_checkout) OR
+            (date_checkout >= :date_check_in2 AND date_checkout <= :date_checkout2) OR
+            (date_check_in <= :date_check_in3 AND date_checkout >= :date_checkout3)
+    ) AND room_type_id=:room_type_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':date_check_in', $date_check_in);
+        $statement->bindValue(':date_check_in2', $date_check_in);
+        $statement->bindValue(':date_check_in3', $date_check_in);
         $statement->bindValue(':date_checkout', $date_checkout);
+        $statement->bindValue(':date_checkout2', $date_checkout);
+        $statement->bindValue(':date_checkout3', $date_checkout);
         $statement->bindValue(':room_type_id', $room_type_id);
         $statement->execute();
         $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
+
+    //  $query = 'SELECT * FROM room WHERE id NOT IN (
+    //     SELECT `room_id` FROM `room_order` WHERE
+    //         (date_check_in >= :date_check_in AND date_check_in <= :date_checkout) OR
+    //         (date_checkout >= :date_check_in AND date_checkout <= :date_checkout) OR
+    //         (date_check_in <= :date_check_in AND date_checkout >= :date_checkout)
+    // ) AND room_type_id=:room_type_id';
+    // try {
+    //     $statement = $db->prepare($query);
+    //     $statement->bindValue(':date_check_in', $date_check_in);
+    //     $statement->bindValue(':date_checkout', $date_checkout);
+    //     $statement->bindValue(':room_type_id', $room_type_id);
+    //     $statement->execute();
+    //     $result = $statement->fetchAll();
+    //     $statement->closeCursor();
+    //     return $result;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
+        echo $error_message;
         display_db_error($error_message);
     }
 }

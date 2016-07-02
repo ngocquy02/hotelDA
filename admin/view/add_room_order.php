@@ -1,14 +1,5 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/admin_db.php');
-	require_once('../include/get_list.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || isset($_SESSION['date_check_in'])==NULL) {
-		header ("Location: $plink");
-	}
-	require_once('menu.php');
-	$cities=get_city();
+	
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 	<form method="POST" action ="<?php echo $plink;?>/model/add_room_order.php?id=<?php echo $_GET['id']?>" id="form">

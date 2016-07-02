@@ -1,14 +1,5 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/get_list.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || $_SESSION['level']!='1') {
-		header ("Location: $plink");
-	}
-	require_once('menu.php');
-	$cities=get_city();
-	$setting=get_setting();
+	
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
 	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/setting.php">

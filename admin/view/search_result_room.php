@@ -1,27 +1,12 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/get_list.php');
-	require_once('../include/customer_db.php');
-	require_once('../include/room_db.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || isset($_POST['type_room'])==NULL) {
-		header ("Location: $plink");
-	}
-$get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checkout'],$_POST['type_room']);
-	require_once('menu.php');
-	$_SESSION['date_check_in']=$_POST['date_check_in'];
-	$_SESSION['date_checkout']=$_POST['date_checkout'];
-	$_SESSION['type_room']=$_POST['type_room'];
-	$_SESSION['childent']=$_POST['childent'];
-	$_SESSION['adults']=$_POST['adults'];
+	
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 			<div class="row col-md-12">
 				<div class="right col-lg-12">
 				  <section class="panel">
 				      <header class="panel-heading" style="text-align:center">
-				          Quản lí phòng
+				          Đặt phòng
 				      </header>
 						<div class="panel-body table-responsive">
 							<table class="table">

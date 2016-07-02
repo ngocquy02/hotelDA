@@ -1,16 +1,5 @@
 <?php
-	require_once('../include/config.php');
-	require_once('../include/get_list.php');
-	require_once('../include/customer_db.php');
-	require_once('../include/room_db.php');
-	require_once('../link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL) {
-		header ("Location: $plink");
-	}
-
-	require_once('menu.php');
-	$room_type=get_room_type();
+	
 ?>
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-9 col-lg-offset-3 main">
@@ -33,11 +22,11 @@
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel15">Ngày đến</label>
-								<input type="date" class="form-control" id="sel15" name="date_check_in" required>
+								<input type="date" class="form-control" id="sel15" value="<?php echo "$date_check_in"; ?>" name="date_check_in" required>
 				              </div>
 				               <div class="col-md-6 form-group">
 				                <label for="sel16">Ngày đi</label>
-								<input type="date" class="form-control" id="sel16" name="date_checkout" required>
+								<input type="date" class="form-control" id="sel16" value="<?php echo "$date_check_in"; ?>" name="date_checkout" required>
 				              </div>
 				              <div class="col-md-3 form-group">
 				                <label for="sel18">Người lớn</label>
