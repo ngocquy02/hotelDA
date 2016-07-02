@@ -7,6 +7,6 @@
 		header ("Location: $plink");
 	}
 	require_once('../view/menu.php');
-	$room_type=get_room_type()
+	$room_type=get_room_type();
 	require_once('../view/view_add_room.php');
 ?>
