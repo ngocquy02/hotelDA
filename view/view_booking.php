@@ -28,7 +28,7 @@
 							<h5>Loại phòng</h5>
 							<div class="book_date">
 							<form>
-								<select class="form-control">
+								<select class="form-control loaiphong ">
 								  <option>Phòng đơn</option>
 								  <option>Phòng đôi</option>
 								  <option>Phòng vip</option>

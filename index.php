@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nhà nghỉ giá rẻ đà nẵng Blue River Motel</title>
+<title>Khách Sạn Blue River Đà Nẵng</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Nhà nghỉ giá rẽ, Motel giá rẻ, Cheap motel, Blue river, Blueriverdn, Nhà khách giá rẻ tại đà nẵng, Nhà nghỉ đà nẵng, Nhà khách đà nẵng, Nhà nghỉ giá rẻ đà nẵng," />
@@ -101,7 +101,8 @@ JC.init({
 <div>
 	<?php
 		include('include/menu.php');
-		include('view/booking.php');
+		include('view/view_booking.php');
+		include('view/view_room.php');
 	?>
 </div>
 </body>
