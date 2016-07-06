@@ -2355,6 +2355,9 @@ margin-top: 0.5em;
   margin-top: 20%;
 }
 
+.navbar{
+    position: inherit !important;
+}
 
 
 

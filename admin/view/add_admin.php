@@ -11,7 +11,7 @@
 				      <div class="panel-body">
 				              <div class="col-md-6 form-group">
 								<label for="1">Tên</label>
-								<input type="text" class="form-control" id="1" name="name" required>
+								<input type="text" class="form-control" id="1" name="name" pattern="[A-Za-z]" required>
 				              </div>
 				               <div class="col-md-6 form-group">
 				                <label for="2">Chức vụ</label>

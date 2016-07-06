@@ -36,7 +36,7 @@
 													</svg>
 													Sửa
 												</a>
-												<a href="<?php echo $plink;?>/model/delete_room.php?id=<?php echo $room['id']?>" style="font-size:12px">
+												<a href="<?php echo $plink;?>/model/delete_room.php?id=<?php echo $room['id']?>" style="font-size:12px" onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;">
 													<svg class="glyph stroked cancel" style="height: 15;width:15;">
 														<use xlink:href="#stroked-cancel"></use>
 													</svg>
@@ -45,9 +45,14 @@
 											</li>
 										</td>
 									</tr>
+
 								<?php endforeach?>
-								</tbody>
+								</tbody>								
 							</table>
+						<?php if(count(get_list_room())==0)
+						{echo 
+							'<h3 class="col-lg-12" style="text-align:center;padding-top:20px;color:#f9243f;">Không có dữ liệu</h3>';} ?>
+						
 
 						</div>
 					</section>

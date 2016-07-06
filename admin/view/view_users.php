@@ -51,7 +51,6 @@
 								<?php endforeach?>
 								</tbody>
 							</table>
-
 						</div>
 					</section>
 					<div class="col-md-5">
