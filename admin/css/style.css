@@ -28,3 +28,20 @@
 	background: url(../images/icon.png) no-repeat 3% 50% #FFF !important;
 }
 
+.loaiphong{
+	height: 40px !important;
+}
+
+.room{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.room_detail{
+	min-height: 420px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.room_content{
+	padding: 20px;
+}

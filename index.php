@@ -101,7 +101,8 @@ JC.init({
 <div>
 	<?php
 		include('include/menu.php');
-		include('view/booking.php');
+		include('view/view_booking.php');
+		include('view/view_room.php');
 	?>
 </div>
 </body>
