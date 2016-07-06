@@ -10,5 +10,7 @@
 	}
 	require_once('../view/menu.php');
 	$room_list=get_list_room();
+		$room_type=get_room_type();
+
 	require_once('../view/view_edit_room.php');
 ?>

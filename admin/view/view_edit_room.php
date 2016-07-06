@@ -16,8 +16,13 @@
 								<input type="text" class="form-control" id="sel10" name="name" value="<?php echo $room['name'];?>" required>
 				              </div>
 				              <div class="col-md-6 form-group">
-				                <label for="sel17">Loại phòng</label>
-								<input type="text" class="form-control" id="sel17" name="type_room" value="<?php echo $room['room_type'];?>" required>
+								<label for="sel17">Tên Phòng</label>
+				                <select class="form-control" id="sel17" name="type_room" required>
+									<option value="">Loại phòng</option>
+									<?php foreach ($room_type as $type):;?>
+									<option value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
+									<?php endforeach?>
+								</select>
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel15">Hình ảnh</label>
