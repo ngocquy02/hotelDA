@@ -13,7 +13,7 @@
 							<p>Double room</p>
 						</div>
 						<div class="room_price pull-right">
-							<p >300.000<sup>đ</sup></p>
+							<p>300.000<sup>đ</sup></p>
 						</div>
 					</h3>
 					<div class="clearfix"></div>
