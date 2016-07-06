@@ -60,7 +60,7 @@ function add_room($name,$room_type_id,$img,$description,$price) {
     }
 }
 
-function update_room($id,$name,$room_type,$img,$description,$price) {
+function update_room($id,$name,$room_type_id,$img,$description,$price) {
     global $db;
     $query = 'UPDATE `room` SET `name`=:name,`room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
     try {
