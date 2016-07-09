@@ -19,10 +19,11 @@
 <link href="<?php echo $plink;?>/css/form.css" rel="stylesheet">
 
 <!--Icons-->
-<script src="<?php echo $plink;?>/js/lumino.glyphs.js"></script>
-<script src="<?php echo $plink;?>/js/jquery-1.12.4.min.js"></script>
-<script src="<?php echo $plink;?>/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo $plink;?>/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<?php echo $plink;?>/js/lumino.glyphs.js"></script>
+<script type="text/javascript" src="<?php echo $plink;?>/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="<?php echo $plink;?>/js/jquery.form.js"></script>
+<script type="text/javascript" src="<?php echo $plink;?>/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $plink;?>/js/jquery.validate.min.js"></script>
 </head>
 
 <body>

@@ -20,7 +20,8 @@
 				                <select class="form-control" id="sel17" name="type_room" required>
 									<option value="">Loại phòng</option>
 									<?php foreach ($room_type as $type):;?>
-									<option value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
+									<option value="<?php echo $type['id'];?>" <?php if ($type['id']==$room['room_type_id']) {
+										echo "selected";};?>><?php echo $type['name'];?></option>
 									<?php endforeach?>
 								</select>
 				              </div>
@@ -39,7 +40,7 @@
 				              <div class="row">
 								<div class="col-md-5">
 								</div> 
-									<button type="submit" class="col-md-2 btn btn-primary">Sửa</button>
+									<button onclick="return confirm('Bạn có chắc chắn muốn sửa không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Sửa</button>
 								<div class="col-md-5">
 								</div>
 							</div>

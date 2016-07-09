@@ -53,7 +53,7 @@
 				              </div>
 				              	<div class="col-md-5">
 								</div>			              
-									<button type="submit" class="col-md-2 btn btn-primary">Đặt phòng</button>
+									<button onclick="return confirm('Bạn có muốn đặt phòng?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Đặt phòng</button>
 								<div class="col-md-5">
 								</div>
 						</div>

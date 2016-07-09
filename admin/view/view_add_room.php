@@ -1,7 +1,7 @@
 <?php
 	
-	?>
-
+?>
+	
 	<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
 	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/add_room_setting.php">
 			<div class="row">
@@ -24,10 +24,7 @@
 									<?php endforeach?>
 								</select>
 				              </div>
-				              <div class="col-md-6 form-group">
-				                <label for="sel15">Hình ảnh</label>
-								<input type="text" class="form-control" id="sel15" name="img" required>
-				              </div>
+								
 				               <div class="col-md-6 form-group">
 				                <label for="sel16">Giá (VNĐ)</label>
 								<input type="text" class="form-control" id="sel16" name="price" required>
@@ -39,7 +36,7 @@
 				              <div class="row">
 								<div class="col-md-5">
 								</div> 
-									<button type="submit" class="col-md-2 btn btn-primary">Thêm</button>
+									<button onclick="return confirm('Bạn có muốn thêm phòng không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Thêm</button>
 								<div class="col-md-5">
 								</div>
 							</div>
@@ -48,3 +45,4 @@
 				</div>
 				</div>
 				</form>
+			

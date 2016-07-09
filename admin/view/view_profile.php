@@ -60,7 +60,7 @@
 				              <div class="row">
 								<div class="col-md-5">
 								</div> 
-									<button type="submit" class="col-md-2 btn btn-primary" name="submit">Lưu thông tin</button>
+									<button onclick="return confirm('Bạn có muốn thay đổi thông tin?')?true:false;" type="submit" class="col-md-2 btn btn-primary" name="submit">Lưu thông tin</button>
 								<div class="col-md-5">
 								</div>
 							</div>

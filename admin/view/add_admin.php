@@ -11,7 +11,7 @@
 				      <div class="panel-body">
 				              <div class="col-md-6 form-group">
 								<label for="1">Tên</label>
-								<input type="text" class="form-control" id="1" name="name" pattern="[A-Za-z]" required>
+								<input type="text" class="form-control" id="1" name="name" required>
 				              </div>
 				               <div class="col-md-6 form-group">
 				                <label for="2">Chức vụ</label>
@@ -71,7 +71,7 @@
 				              	<div class="col-md-5">
 								</div>			              
 									
-									<button type="submit" class="col-md-2 btn btn-primary">Thêm</button>
+									<button onclick="return confirm('Bạn có muốn thêm quản trị viên mới không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Thêm</button>
 									
 								<div class="col-md-5">
 								</div>

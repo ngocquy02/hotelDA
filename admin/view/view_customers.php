@@ -40,8 +40,8 @@
 													<use xlink:href="#stroked-clipboard-with-paper"/>
 													</svg>
 													Xem
-												</a>
-												<a href="<?php echo $plink;?>/controller/delete_customer.php?id=<?php echo $customer['id']?>" style="font-size:12px">
+												</a><br>
+												<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/model/delete_customer.php?id=<?php echo $customer['id']?>" style="font-size:12px">
 													<svg class="glyph stroked cancel" style="height: 15px;width:15px;">
 														<use xlink:href="#stroked-cancel"></use>
 													</svg>

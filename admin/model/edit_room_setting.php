@@ -7,7 +7,7 @@
 			header ("Location: $plink");
 	}
     update_room($_GET['id'],$_POST['name'],$_POST['type_room'],$_POST['img'],$_POST['description'],$_POST['price']);	
-    var_dump($_POST['type_room']);die;
+    
     
 	header ("Location: $plink/controller/room_setting.php");
 

@@ -43,7 +43,7 @@
 				              <div class="row">
 								<div class="col-md-5">
 								</div> 
-									<button type="submit" class="col-md-2 btn btn-primary">Sửa thông tin cài đặt</button>
+									<button onclick="return confirm('Bạn có chắc chắn muốn thay đổi thông tin của khách sạn không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Sửa thông tin cài đặt</button>
 								<div class="col-md-5">
 								</div>
 							</div>

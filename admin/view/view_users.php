@@ -39,7 +39,7 @@
 													</svg>
 													Xem
 												</a>
-												<a href="<?php echo $plink;?>/controller/delete.php?id=<?php echo $users['id']?>" style="font-size:12px">
+												<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/controller/delete.php?id=<?php echo $users['id']?>" style="font-size:12px">
 													<svg class="glyph stroked cancel" style="height: 15;width:15;">
 														<use xlink:href="#stroked-cancel"></use>
 													</svg>

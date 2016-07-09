@@ -144,4 +144,18 @@ function delete_customer($email) {
     }
 }
 
+function delete_customer_id($id) {
+    global $db;
+    $query = 'DELETE FROM customer WHERE id = :id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+        $statement->closeCursor();
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 ?>
