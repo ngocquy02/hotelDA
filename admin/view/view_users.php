@@ -51,6 +51,9 @@
 								<?php endforeach?>
 								</tbody>
 							</table>
+							<?php if(count($admin)==0)
+						{echo 
+							'<h3 class="col-lg-12" style="text-align:center;padding-top:20px;color:#f9243f;">Không có dữ liệu</h3>';} ?>
 						</div>
 					</section>
 					<div class="col-md-5">

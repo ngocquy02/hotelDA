@@ -41,7 +41,7 @@
 													</svg>
 													Xem
 												</a><br>
-												<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/model/delete_customer.php?id=<?php echo $customer['id']?>" style="font-size:12px">
+												<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/model/delete_customer.php?id=<?php echo $customer['id']?>" style="font-size:12px;<?php if($_SESSION['level']!=1) {echo "display: none!important;"; };?>">
 													<svg class="glyph stroked cancel" style="height: 15px;width:15px;">
 														<use xlink:href="#stroked-cancel"></use>
 													</svg>
@@ -53,7 +53,9 @@
 								<?php endforeach?>
 								</tbody>
 							</table>
-
+								<?php if(count($customers)==0)
+						{echo 
+							'<h3 class="col-lg-12" style="text-align:center;padding-top:20px;color:#f9243f;">Không có dữ liệu</h3>';} ?>
 						</div>
 					</section>
 				</div>

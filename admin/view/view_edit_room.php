@@ -13,7 +13,8 @@
 				      <div class="panel-body">
 				              <div class="col-md-6 form-group">
 								<label for="sel10">Tên Phòng</label>
-								<input type="text" class="form-control" id="sel10" name="name" value="<?php echo $room['name'];?>" required>
+								<input type="text" class="form-control" id="sel10" name="name" value="<?php echo $room['name'];?>" disabled>
+								<input type="text" class="form-control" id="sel10" name="name" style="display:none;" value="<?php echo $room['name'];?>" required>
 				              </div>
 				              <div class="col-md-6 form-group">
 								<label for="sel17">Tên Phòng</label>

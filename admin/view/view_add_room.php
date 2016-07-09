@@ -13,7 +13,8 @@
 				      <div class="panel-body">
 				              <div class="col-md-6 form-group">
 								<label for="sel10">Tên Phòng</label>
-								<input type="text" class="form-control" id="sel10" name="name" required>
+								<input type="text" class="form-control" id="sel10" value="<?php echo "Phòng ".$count ;?>" disabled>
+								<input type="text" class="form-control" id="sel10" value="<?php echo "Phòng ".$count ;?>" style="display:none;" name="name" required>   
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel17">Loại phòng</label>

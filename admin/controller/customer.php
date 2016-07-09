@@ -5,11 +5,14 @@
 	require_once('../include/get_list.php');
 	require_once('../link.php');
 	session_start();
-	if (isset($_SESSION['email'])==NULL) {
+	if (isset($_SESSION['email'])==NULL || $_GET['id']==NULL) {
+		header ("Location: $plink");
+	}
+	$customers=get_list_customer();
+	$customer=get_customer_id($_GET['id']);
+	if($_GET['id']!=$customer['id']){
 		header ("Location: $plink");
 	}
 	require_once('../view/menu.php');
-	$customer=get_customer_id($_GET['id']);
-	$customers=get_list_customer();
 	require_once('../view/view_customer.php');
 ?>
