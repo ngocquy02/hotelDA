@@ -1,7 +1,7 @@
 <?php
 	
 ?>
-<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
+<div class="col-sm-9 col-sm-offset-3 col-lg-9 col-lg-offset-3 main">
 	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/setting.php">
 			<div class="row">
 				<div class="right col-lg-12">
@@ -41,10 +41,10 @@
 								</select>
 				              </div>
 				              <div class="row">
-								<div class="col-md-5">
+								<div class="col-md-4">
 								</div> 
-									<button onclick="return confirm('Bạn có chắc chắn muốn thay đổi thông tin của khách sạn không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Sửa thông tin cài đặt</button>
-								<div class="col-md-5">
+									<button onclick="return confirm('Bạn có chắc chắn muốn thay đổi thông tin của khách sạn không?')?true:false;" type="submit" class="col-md-4 btn btn-primary">Sửa thông tin cài đặt</button>
+								<div class="col-md-4">
 								</div>
 							</div>
 				      </div>

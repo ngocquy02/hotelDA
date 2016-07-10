@@ -1,5 +1,5 @@
 <?php
-function get_servide($id) {
+function get_service($id) {
     global $db;
     $query = '
         SELECT *
@@ -35,7 +35,7 @@ function get_list_service() {
     }
 }
 
-function add_room($name,$description,$price) {
+function add_service($name,$description,$price) {
     global $db;
     $query = 'INSERT INTO service
                  (`name`,`description`, `price`)
@@ -58,7 +58,7 @@ function add_room($name,$description,$price) {
     }
 }
 
-function update_room($id,$name,$description,$price) {
+function update_service($id,$name,$description,$price) {
     global $db;
     $query = 'UPDATE `service` SET `name`=:name,`description`=:description,`price`=:price WHERE id=:id';
     try {
@@ -75,7 +75,7 @@ function update_room($id,$name,$description,$price) {
     }
 }
 
-function delete_room($id) {
+function delete_service($id) {
     global $db;
     $query = 'DELETE FROM service WHERE id = :id';
     try {

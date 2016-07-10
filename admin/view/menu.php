@@ -37,7 +37,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="<?php echo $plink;?>/index.php"><span></span>admin</a>
-				<ul class="user-menu">
+				<ul class="user-menu" style="text-align:center;">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -61,8 +61,8 @@
 		<ul class="nav menu">
 			<li class="active"><a href="<?php echo $plink;?>/index.php"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg>Tổng quan</a></li>
 			<li><a href="<?php echo $plink;?>/controller/customers.php"><svg class="glyph stroked female user"><use xlink:href="#stroked-female-user"></use></svg>Thông tin khách hàng</a></li>
-			<li><a href="<?php echo $plink;?>/controller/room.php"><svg class="glyph stroked paper coffee cup"><use xlink:href="#stroked-paper-coffee-cup"></use></svg>Thông tin đặt phòng</a></li>
-			<li><a href="<?php echo $plink;?>/controller/service.php"><svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content"></use></svg>Quản lí dịch vụ</a></li>
+			<li><a href="<?php echo $plink;?>/controller/room.php"><svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content"></use></svg>Thông tin đặt phòng</a></li>
+			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/service.php"><svg class="glyph stroked paper coffee cup"><use xlink:href="#stroked-paper-coffee-cup"></use></svg>Quản lí dịch vụ</a></li>
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/room_setting.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Quản lí phòng</a></li>
 			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Đặt phòng</a></li>
 			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Thống kê</a></li>

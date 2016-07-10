@@ -159,12 +159,12 @@ function add_room_order($room_id,$status_id,$note,$date_check_in,$date_checkout,
     }
 }
 
-function add_room_order_search($room_id,$date_check_in,$date_checkout,$date_order,$customer_id) {
+function add_room_order_search($room_id,$date_check_in,$date_checkout,$date_order,$customer_id,$price) {
     global $db;
     $query = 'INSERT INTO room_order
-                 (`room_id`,`date_check_in`, `date_checkout`, `date_order`, `customer_id`)
+                 (`room_id`,`date_check_in`, `date_checkout`, `date_order`, `customer_id`,`price`)
               VALUES
-                 (:room_id, :date_check_in, :date_checkout,:date_order,:customer_id)';
+                 (:room_id, :date_check_in, :date_checkout,:date_order,:customer_id,:price)';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':room_id', $room_id);
@@ -172,6 +172,7 @@ function add_room_order_search($room_id,$date_check_in,$date_checkout,$date_orde
         $statement->bindValue(':date_check_in', $date_check_in);
         $statement->bindValue(':date_checkout', $date_checkout);
         $statement->bindValue(':date_order', $date_order);
+        $statement->bindValue(':price', $price);
         $statement->execute();
         $statement->closeCursor();
 

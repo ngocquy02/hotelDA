@@ -15,14 +15,6 @@
 								<input type="text" class="form-control" id="sel10" value='<?php echo $customer['name'];?>' disabled>
 				              </div>
 				              <div class="col-md-6 form-group">
-								<label for="sel10">Chức vụ</label>
-								<input type="text" class="form-control" id="sel10" value='<?php echo $level['name'];?>' disabled>
-				              </div>
-				              <div class="col-md-6 form-group">
-								<label for="sel10">Mã khách hàng</label>
-								<input type="text" class="form-control" id="sel10" value='<?php echo "KH-".$customer['id'];?>' disabled>
-				              </div>
-				              <div class="col-md-6 form-group">
 								<label for="sel10">Giới tính</label>
 								<input type="text" class="form-control" id="sel10" value='<?php echo $customer['gender'];?>' disabled>
 				              </div>
