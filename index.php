@@ -62,6 +62,22 @@
 		});
 </script>
 
+<style type="text/css">
+
+	.btn-book{
+	color: #0098da !important; 
+	background-color: #fff !important; 
+	border:1px #0098da solid;
+	transition: all 0.5s;	
+	}
+	.btn-book:hover{
+	background: #0098da !important;
+	color: #fff !important;
+	border: 1px #fff solid !important;
+	transition: all 0.5s;	
+}
+</style>
+
 </head>
 <body>
 <div>

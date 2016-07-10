@@ -29,7 +29,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div >
-						<a class="btn btn-success"><span>Đặt ngay</span></a>
+						<a class="btn-book btn btn-info"><span>Đặt ngay</span></a>
 					</div>
 				</div>
 			</article>

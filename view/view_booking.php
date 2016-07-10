@@ -7,10 +7,10 @@
 <div class="banner-text wow fadeInUp" data-wow-delay="0.5s">
 	<h1>Tìm Phòng Trống</h1>
 </div>
-<div class="reservation col-lg-12">
+<div class="reservation col-lg-12" style="background: rgba(60, 191, 232,0.4); border-radius:10px; padding:0 20px;">
 <!--start-date-piker-->
 
-	<ul>
+	<ul style="margin-top: 10px;">
 		<form>		
 		<li  class="col-lg-4">
 			<h5>Ngày nhận phòng :</h5>
@@ -29,8 +29,8 @@
 				</select>
 		</li>
 		<div class="clearfix"></div>
-		<li class="col-lg-12" style="margin-top:20px;">
-			<button type="button" class="btn btn-info pull-right">Tìm Phòng</button>
+		<li class="col-lg-12 " style="margin-top:20px; margin-bottom: 20px;">
+			<button type="button" class="btn-book btn btn-info pull-right">Tìm Phòng</button>
 		</li>
 		</form>
 	</ul>
