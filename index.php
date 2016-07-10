@@ -24,52 +24,16 @@
 <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
 <!--animated-css-->
-<link href="admin/css/animate.css" rel="stylesheet" type="text/css" media="all">
 <link href="<?php echo $plink;?>admin/img/favicon.ico" rel="shortcut icon">
 <link href="admin/css/styles.css" rel="stylesheet">
 <link href="admin/css/system.css" rel="stylesheet">
 <link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="images/icon1.png" type="image/x-icon" rel="shortcut icon">
-<link type="text/css" rel="stylesheet" href="admin/css/JFGrid.css" />
-<link type="text/css" rel="stylesheet" href="admin/css/JFFormStyle-1.css" />
-<link href="admin/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="admin/css/jquery-ui.css" />
-<script src="admin/js/jquery.min.js"></script>
-<script src="admin/js/jquery-ui.js"></script>
-<script src="admin/js/wow.min.js"></script>
-<script type="text/javascript" src="admin/js/move-top.js"></script>
-<script type="text/javascript" src="admin/js/easing.js"></script>
-<script>
-	$(function() {
-		$( "#datepicker,#datepicker1" ).datepicker();
-	});
- </script>
-<script type="text/javascript" src="admin/js/JFCore.js"></script>
-<script type="text/javascript" src="admin/js/JFForms.js"></script>
-
-<script type="text/javascript">
-(function() {
-JC.init({
-	domainKey: ''
-});
-})();
-</script>
-
-<script>
- 	new WOW().init();
-</script>
-<!--/animated-css-->
-
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			});
-</script>
-
+<link href="admin/css/datepicker.css" rel="stylesheet" />
+<script src="admin/js/jquery-1.12.4.min.js"></script>
+<script src="admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="admin/js/bootstrap-datepicker.js"></script>
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {

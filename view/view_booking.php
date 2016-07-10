@@ -1,3 +1,9 @@
+<?php
+	require_once('./admin/include/config.php');
+	require_once('./admin/include/room_db.php');
+	require_once('./admin/include/get_list.php');
+	$room_types=get_room_type();
+?>
 <div class="banner-text wow fadeInUp" data-wow-delay="0.5s">
 	<h1>Tìm Phòng Trống</h1>
 </div>
@@ -7,35 +13,27 @@
 		<div class="b_room">
 			<div class="booking_room">
 				<div>
-					<ul>		
+					<ul>
+						<form>		
 						<li  class="span1_of_1 left">
 							<h5>Ngày nhận phòng :</h5>
-							<div class="book_date">
-								<form>
-								<input class="date" id="datepicker" type="text" value="dd/mm/yyyy" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
-								</form>
-							</div>					
+							<input type="text" class="span2" value="" id="dpd1">						
 						</li>
 						<li  class="span1_of_1 left">
-							<h5>Ngày trả phòng:</h5>
-							<div class="book_date">
-							<form>
-								<input class="date" id="datepicker1" type="text" value="dd/mm/yyyy" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required=>
-							</form>
-							</div>		
+							<h5>Ngày trả phòng:</h5>						
+							<input type="text" class="span2" value="" id="dpd2"></th>								
 						</li>
 						<li class="span1_of_1">
 							<h5>Loại phòng</h5>
-							<div class="book_date">
-							<form>
 								<select class="form-control loaiphong ">
-								  <option>Phòng đơn</option>
-								  <option>Phòng đôi</option>
-								  <option>Phòng vip</option>
+									<?php foreach ($room_types as $room_type):;?>
+										<option value="<?php echo $room_type['id'];?>"><?php echo $room_type['name'];?></option>
+									<?php endforeach;?>
 								</select>
-							</form>
+							
 							</div>	
 						</li>
+						</form>
 					</ul>
 					
 				</div>
@@ -53,4 +51,30 @@
 </div>
 
 
-		
+<script type="text/javascript">
+	var nowTemp = new Date();
+var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+ 
+var checkin = $('#dpd1').datepicker({
+  onRender: function(date) {
+    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  if (ev.date.valueOf() > checkout.date.valueOf()) {
+    var newDate = new Date(ev.date)
+    newDate.setDate(newDate.getDate() + 1);
+    checkout.setValue(newDate);
+  }
+  checkin.hide();
+  $('#dpd2')[0].focus();
+}).data('datepicker');
+var checkout = $('#dpd2').datepicker({
+  onRender: function(date) {
+    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+  }
+}).on('changeDate', function(ev) {
+  checkout.hide();
+}).data('datepicker');
+
+
+</script>
