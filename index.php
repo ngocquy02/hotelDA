@@ -25,7 +25,7 @@
 <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
 <!--animated-css-->
 <link href="<?php echo $plink;?>admin/img/favicon.ico" rel="shortcut icon">
-<link href="admin/css/styles.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <link href="admin/css/system.css" rel="stylesheet">
 <link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -34,6 +34,8 @@
 <script src="admin/js/jquery-1.12.4.min.js"></script>
 <script src="admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="admin/js/bootstrap-datepicker.js"></script>
+
+<link href="admin/css/styles.css" rel="stylesheet">
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {

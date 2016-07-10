@@ -749,7 +749,9 @@ h1.page-header {
 	background-color: rgba(0, 0, 0, .5);
 	border-color: #285e8e;
 }
-
+.datepicker{
+	min-width: 300px;
+}
 .datepicker table tr td span:hover,
 .datepicker thead tr:first-child th:hover,
 .datepicker tfoot tr th:hover,
@@ -1099,10 +1101,7 @@ font-weight:700;
 	color: #6b6b6b;
 	line-height: 1.8em;
 }
-.reservation{
-	padding: 16px 10px 32px 0;
-	background: rgba(255, 255, 255, 0.27);
-}
+
 .reservation ul {
 	padding: 0;
 	margin: 0;
