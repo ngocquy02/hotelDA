@@ -74,8 +74,29 @@
 	background: #0098da !important;
 	color: #fff !important;
 	border: 1px #fff solid !important;
-	transition: all 0.5s;	
+	transition: all 0.5s;
 }
+
+	.room_detail{
+	padding: 10px;
+	border: 1px solid #0098da;
+	border-radius: 	10px;
+}
+
+	.room_content h3, .room_content .room_description, .room_content .room_button{
+	margin-top:20px;
+	}	
+
+	.book_title {
+		color: #fff;
+		text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+	}
+
+	.list_room_title{
+		color: #0098da;
+		font-weight:600;
+		text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+	}
 </style>
 
 </head>

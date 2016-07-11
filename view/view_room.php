@@ -6,7 +6,7 @@
 ?>
 <div class="container">
 	<div class="row" style="width:100%;">
-	<h2 class="text-success" style="text-align:center;">DANH SÁCH PHÒNG</h2>
+	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
 	<?php foreach ($rooms as $room):;?>
 		<div class="col col-sm-4 room">
 			<article class="room_detail" style="min-height: 403px;">
@@ -25,11 +25,11 @@
 					</h3>
 					<div class="clearfix"></div>
 					<div class="room_description">
-						<p><?php echo $room['description'];?></p>
+						<p><?php echo substr($room['description'],0,150)." ... ";?></p>
 					</div>
 					<div class="clearfix"></div>
-					<div >
-						<a class="btn-book btn btn-info"><span>Đặt ngay</span></a>
+					<div class="room_button" >
+						<a class="btn-book btn btn-info pull-right"><span>Đặt ngay</span></a>
 					</div>
 				</div>
 			</article>
