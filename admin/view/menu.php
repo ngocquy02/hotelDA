@@ -15,7 +15,6 @@
 
 
 <link href="<?php echo $plink;?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo $plink;?>/css/datepicker.css" rel="stylesheet" />
 <link href="<?php echo $plink;?>/css/styles.css" rel="stylesheet">
 <link href="<?php echo $plink;?>/css/form.css" rel="stylesheet">
 
@@ -26,7 +25,6 @@
 <script type="text/javascript" src="<?php echo $plink;?>/js/jquery.form.js"></script>
 <script type="text/javascript" src="<?php echo $plink;?>/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $plink;?>/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="<?php echo $plink;?>/js/bootstrap-datepicker.js"></script>
 </head>
 
 <body>

@@ -17,7 +17,7 @@
       $date_checkout = strtotime($_SESSION['date_checkout']);
       $date = abs($date_checkout - $date_check_in)/ (60*60*24);
       $price= $date * $get_room['price'];
-    add_room_order_search($_GET['id'],$_SESSION['date_check_in'],$_SESSION['date_checkout'],$date_order,$get_customer['id'],$price);
+    add_room_order_search($_GET['id'],$_SESSION['date_check_in'],$_SESSION['date_checkout'],$date_order,$get_customer['id'],$price,$date);
 	header ("Location: $plink/controller/room.php");
 
 	?>
