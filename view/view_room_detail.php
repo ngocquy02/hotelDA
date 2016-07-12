@@ -1,16 +1,4 @@
-<?php
-	require_once('admin/include/config.php');
-	require_once('admin/include/admin_db.php');
-	require_once('admin/include/get_list.php');
-	$setting=get_setting();
-	$view=$setting['view'];
-	$view++;
-	// update_view('10');
-	if (isset($_COOKIE['view'])==NULL) {
-		setcookie('view','view', time() + 600);
-		update_view($view);
-	}
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,10 +81,7 @@
 
     </script>
 <style type="text/css">
-	.banner-text h1 span{
-		background: rgba(255, 255, 255, 0.15) !important;
-		padding: 5px;
-	}
+
 	.btn-book{
 	color: #0098da !important; 
 	background-color: #fff !important; 
@@ -162,17 +147,40 @@
             50% { opacity:0; }
             100% { opacity:1; }
         }
-
 </style>
 
 </head>
 <body>
-<div>
-	<?php
-		include('include/menu.php');
-		include('view/view_booking.php');
-		include('view/view_room.php');
-	?>
-</div>
+	<div class="container">
+		<div class="row" style="width:100%;">
+			<div class="col col-sm-4 room">
+				<article class="room_detail" style="min-height: 403px;">
+					<div class="item-image">
+						<img itemprop="thumbnailUrl" alt="" src="images/room/phong101.png">
+					</div>
+
+					<div class="room_content">
+						<h3>
+							<div class="room_title pull-left">
+								<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>
+							</div>
+							<div class="room_price pull-right">
+								<p ><?php echo $rooms['price'];?><sup>đ</sup></p>
+							</div>
+						</h3>
+						<div class="clearfix"></div>
+						<div class="room_description">
+							<p><?php echo substr($rooms['description'],0,150)." ... ";?></p>
+						</div>
+						<div class="clearfix"></div>
+						<div class="room_button" >
+							<a class="btn-book btn btn-info pull-right"><span>Đặt ngay</span></a>
+						</div>
+					</div>
+				</article>
+			</div>								
+		</div>
+	</div>
+
 </body>
 </html>

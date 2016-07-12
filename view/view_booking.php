@@ -4,21 +4,29 @@
 	require_once('./admin/include/get_list.php');
 	$room_types=get_room_type();
 ?>
-<div class="banner-text wow fadeInUp" data-wow-delay="0.5s">
-	<h1 class="book_title">TÌM PHÒNG</h1>
+<div class="banner-text fadeInUp" >
+	<h1 class="book_title">
+	        <div id="typed-strings">
+                <span>Chào mừng bạn !</span>
+                <p>Đến với Blue River Hotel</p>
+                <p>Tìm phòng Ngay !</p>
+            </div>
+            <span id="typed" style="white-space:pre;"></span>
+    </h1>
 </div>
-<div class="reservation col-lg-12" style="background: rgba(60, 191, 232,0.4); border-radius:10px; padding:0 20px;">
+<div class="reservation col-lg-10" style="background: rgba(60, 191, 232,0.4); border-radius:10px; padding:0 20px; margin:0 10%;">
 <!--start-date-piker-->
 
 	<ul style="margin-top: 10px;">
 		<form>		
 		<li  class="col-lg-4">
 			<h5>Ngày nhận phòng :</h5>
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd1">						
+			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd1">
+
 		</li>
 		<li  class="col-lg-4">
 			<h5>Ngày trả phòng:</h5>						
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd2">							
+			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd2">							
 		</li>
 		<li class="col-lg-4">
 			<h5>Loại phòng</h5>

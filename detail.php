@@ -1,16 +1,4 @@
-<?php
-	require_once('admin/include/config.php');
-	require_once('admin/include/admin_db.php');
-	require_once('admin/include/get_list.php');
-	$setting=get_setting();
-	$view=$setting['view'];
-	$view++;
-	// update_view('10');
-	if (isset($_COOKIE['view'])==NULL) {
-		setcookie('view','view', time() + 600);
-		update_view($view);
-	}
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,10 +81,7 @@
 
     </script>
 <style type="text/css">
-	.banner-text h1 span{
-		background: rgba(255, 255, 255, 0.15) !important;
-		padding: 5px;
-	}
+
 	.btn-book{
 	color: #0098da !important; 
 	background-color: #fff !important; 
@@ -162,17 +147,71 @@
             50% { opacity:0; }
             100% { opacity:1; }
         }
-
 </style>
 
 </head>
 <body>
-<div>
-	<?php
-		include('include/menu.php');
-		include('view/view_booking.php');
-		include('view/view_room.php');
-	?>
-</div>
+<?php
+	$room_id = ($_GET['room_id']);
+	include('include/menu.php');
+	require_once('./admin/include/config.php');
+	require_once('./admin/include/room_db.php');
+	require_once('./admin/include/get_list.php');
+	$rooms=get_room($room_id);
+?>
+	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 50px; width:100%;">
+		<div class="row" style="width:90%; margin:auto;">
+			<div class="col col-md-7 col-xs-12 room">
+				<article class="" style="min-height: 403px;">
+					<div class="item-image">
+						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong101.jpg">
+					</div>
+
+					<div class="room_content">
+						<h3>
+							<div class="room_title pull-left">
+								<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>
+							</div>
+							<div class="room_price pull-left">
+								<p ><?php echo $rooms['price'];?><sup>đ</sup></p>
+							</div>
+						</h3>
+						<div class="clearfix"></div>
+						<div class="room_description">
+							<p><?php echo $rooms['description'];?></p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</article>
+			</div>
+
+			<div class="col col-md-5 col-xs-12">
+				<div class="col-md-12">
+					<div class="form-group"> 
+						<label>Tên*</label>
+						<span class="clearfix">
+							<input style="width:90%;" type="text" required>
+						</span> 
+					 	<label class="clearfix">E-mail *</label>
+					 	<span class="email clearfix">
+					 		<input style="width:90%;" type="email" name="email">
+					 	</span>
+					 	<label class="clearfix">Số Điện Thoại*</label>
+					 	<span class="Phone clearfix">
+					 		<input style="width:90%;" type="tel" name="Phone" required>
+					 	</span>
+					 	<label class="clearfix">Nhu cầu của bạn</label>
+					 	<span class="Text clearfix">
+					 		<textarea style="width:90%;" name="Text" cols="40" rows="10"></textarea>
+					 	</span> 
+					</div>
+					<div class="room_button" >
+						<a class="btn-book btn btn-info pull-left"><span>Đặt ngay</span></a>
+					</div>
+				</div>
+			</div>								
+		</div>
+	</div>
+
 </body>
 </html>
