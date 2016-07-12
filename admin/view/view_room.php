@@ -34,7 +34,14 @@
 										<td><?php echo date('d/m/Y',strtotime($order['date_check_in']));?></td>
 										<td><?php echo date('d/m/Y',strtotime($order['date_checkout']));?></td>
 										<td><?php echo $order['quantity']." Ngày";?></td>
-										<td></td>
+										<td>												
+											<a href="<?php echo $plink;?>/controller/add_service_order.php?id=<?php echo $order['id']?>" style="font-size:12px">
+												<svg class="glyph stroked plus sign" style="height: 15;width:15;">
+												<use xlink:href="#stroked-plus-sign"/>
+												</svg>
+											Thêm
+											</a>
+										</td>
 										<td><?php echo $order['price'];?></td>
 										<td>
 											<li style="list-style-type: none;">

@@ -3,7 +3,7 @@
 	?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/edit_room_setting.php?id=<?php echo $_GET['id']; ?>">
+	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/edit_service.php?id=<?php echo $_GET['id']; ?>">
 			<div class="row">
 				<div class="right col-lg-12">
 				  <section class="panel">

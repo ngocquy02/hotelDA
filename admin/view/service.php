@@ -28,10 +28,10 @@
 										<td class="">
 											<li style="list-style-type: none; text-align:center;">
 												<a href="<?php echo $plink;?>/controller/edit_service.php?id=<?php echo $service['id']?>" style="font-size:12px">
-													<svg class="glyph stroked clipboard with paper" style="height: 15;width:15;">
-													<use xlink:href="#stroked-clipboard-with-paper"/>
+													<svg class="glyph stroked pencil" style="height: 15;width:15;">
+													<use xlink:href="#stroked-pencil"/>
 													</svg>
-													Xem
+													Sửa
 												</a>
 												<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/model/delete_service.php?id=<?php echo $service['id']?>" style="font-size:12px;<?php if($_SESSION['level']!=1) {echo "display: none!important;"; };?>">
 													<svg class="glyph stroked cancel" style="height: 15px;width:15px;">
