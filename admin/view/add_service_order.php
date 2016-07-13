@@ -24,18 +24,18 @@
 								</thead>
 								<tbody>
 								<?php foreach ($services as $service):?>
-									<form>
+									<form method="POST" action="<?php echo $plink;?>/model/add_service_order.php?id=<?php $_GET['id']?>">
 									<tr>
 										<th scope="row"><?php echo $service['name']; ?></th>
 										<td><?php echo $service['description']; ?></td>
 										<td><?php echo $service['price']; ?></td>
 										<td><input type="number" name="quantity"></td>
 										<td>												
-											<button onclick="return confirm('Bạn có muốn thêm dịch vụ?')?true:false;" class="btn btn-primary" style="font-size:12px">
+											<button onclick="return confirm('Bạn có muốn thêm dịch vụ?')?true:false;" style="color:#30a5ff;">
 												<svg class="glyph stroked plus sign" style="height: 15;width:15;">
 												<use xlink:href="#stroked-plus-sign"/>
 												</svg>
-											Thêm
+											Thêm<?php $_SESSION['']=$service['id'];$_SESSION['description']=$service['description'];$_SESSION['price']=$service['price'];?>
 											</button>
 										</td>
 									</tr>
