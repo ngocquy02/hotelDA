@@ -159,7 +159,7 @@
 	require_once('./admin/include/get_list.php');
 	$rooms=get_room($room_id);
 ?>
-	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 50px; width:100%;">
+	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
 		<div class="row" style="width:90%; margin:auto;">
 			<div class="col col-md-7 col-xs-12 room">
 				<article class="" style="min-height: 403px;">
@@ -186,32 +186,69 @@
 			</div>
 
 			<div class="col col-md-5 col-xs-12">
-				<div class="col-md-12">
-					<div class="form-group"> 
-						<label>Tên*</label>
-						<span class="clearfix">
-							<input style="width:90%;" type="text" required>
-						</span> 
-					 	<label class="clearfix">E-mail *</label>
-					 	<span class="email clearfix">
-					 		<input style="width:90%;" type="email" name="email">
-					 	</span>
-					 	<label class="clearfix">Số Điện Thoại*</label>
-					 	<span class="Phone clearfix">
-					 		<input style="width:90%;" type="tel" name="Phone" required>
-					 	</span>
-					 	<label class="clearfix">Nhu cầu của bạn</label>
-					 	<span class="Text clearfix">
-					 		<textarea style="width:90%;" name="Text" cols="40" rows="10"></textarea>
-					 	</span> 
+				<form method="POST" action ="<?php echo $plink;?>/model/add_room_order.php?id=<?php echo $_GET['id']?>" id="form">
+					<div class="row col-md-12" style="padding: 0px; margin:0px;">
+						<section class="panel">
+						      <header class="panel-heading" style="text-align:center">
+						         THÔNG TIN ĐẶT PHÒNG
+						      </header>
+						      <div class="col-md-12" style="padding: 0px; margin:0px;">
+						            <div class="col-md-6 form-group">
+										<label for="1">Tên</label>
+										<input type="text" class="form-control" id="1" name="name" required>
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="">Giới tính</label>
+										<select class="form-control" id="4" name="gender" required="">
+											<option value="">Giới tính</option>
+											<option value="Nam">Nam</option>
+											<option value="Nữ">Nữ</option>
+										</select>
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="5">Ngày sinh</label>
+										<input type="date" class="form-control" id="5" name="birth_day" required>
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="6">Số chứng minh</label>
+										<input type="text" class="form-control" id="6" required pattern="[0-9]{9}" name="passport">
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="7">Điện thoại</label>
+										<input type="tel" class="form-control" id="7" required name="phone">
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="8">Email</label>
+										<input type="email" class="form-control" id="8" required name="email">
+						            </div>
+						            <div class="col-md-6 form-group">
+										<label for="9">Địa chỉ</label>
+										<input type="text" class="form-control" name="adress" id="9" required>
+						            </div>
+					                <div class="col-md-6 form-group">
+									<label for="10">Thành phố</label>
+									<select class="form-control" id="10" name="city" required="">
+										<option value="">Thành phố</option>
+										<?php foreach ($cities  as $city ):;?>
+										<option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
+										<?php endforeach;?>
+									</select>
+					              	</div>
+					              	<div class="col-md-5">
+									</div>			              
+									<button onclick="return confirm('Bạn có muốn đặt phòng?')?true:false;" type="submit" class="btn btn-primary">Đặt phòng
+									</button>
+
+									<div class="col-md-5">
+									</div>
+								</div>
+							</section>					
 					</div>
-					<div class="room_button" >
-						<a class="btn-book btn btn-info pull-left"><span>Đặt ngay</span></a>
-					</div>
-				</div>
+				</form>
+
 			</div>								
 		</div>
 	</div>
-
+	<?php include('include/footer.php'); ?>
 </body>
 </html>

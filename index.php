@@ -172,6 +172,7 @@
 		include('include/menu.php');
 		include('view/view_booking.php');
 		include('view/view_room.php');
+		include('include/footer.php');
 	?>
 </div>
 </body>
