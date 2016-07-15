@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row" style="width:100%;">
 	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
-	<?php foreach ($rooms as $room):;?>
+	<?php foreach ($get_result_search as $room):;?>
 		<div class="col col-sm-4 room">
 			<article class="room_detail" style="min-height: 403px;">
 				<div class="item-image" >

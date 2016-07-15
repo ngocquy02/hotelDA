@@ -15,4 +15,4 @@ $get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checko
 	$_SESSION['date_checkout']=$_POST['date_checkout'];
 	$_SESSION['type_room']=$_POST['type_room'];
 	require_once('../view/search_room_result.php');
-?>
+?>  
