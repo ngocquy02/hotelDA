@@ -32,3 +32,5 @@
 	<?php endforeach;?>										
 	</div>
 </div>
+
+<?php var_dump()?>
