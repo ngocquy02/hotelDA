@@ -1,12 +1,21 @@
 <?php
-	$room_id = ($_GET['room_id']);
-require_once('./admin/include/config.php');
-	require_once('./admin/include/room_db.php');
-	require_once('./admin/include/get_list.php');
-	require_once('./admin/link.php');
-	$rooms=get_room($room_id);
-	$cities=get_city();
-?>
+	require_once('admin/include/config.php');
+	require_once('admin/include/get_list.php');
+	require_once('admin/include/customer_db.php');
+	require_once('admin/include/room_db.php');
+	require_once('admin/link.php');
+	session_start();
+	if (isset($_SESSION['email'])==NULL || isset($_POST['type_room'])==NULL) {
+		header ("Location: ");
+	}
+	$rooms=get_list_room();
+	$get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checkout'],$_POST['type_room']);
+	// require_once('../view/menu.php');
+	$_SESSION['date_check_in']=$_POST['date_check_in'];
+	$_SESSION['date_checkout']=$_POST['date_checkout'];
+	$_SESSION['type_room']=$_POST['type_room'];
+	// require_once('../view/search_room_result.php');
+?>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -162,98 +171,43 @@ require_once('./admin/include/config.php');
 <?php
 	include('include/menu.php');
 ?>
-	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
-		<div class="row" style="width:90%; margin:auto;">
-			<div class="col col-md-7 col-xs-12 room">
-				<article class="" style="min-height: 403px;">
-					<div class="item-image">
-						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong101.jpg">
-					</div>
+<div class="container" style="background:#fff; width:100%;">
+	<div class="row" style="width:90%; margin:20px 5% 5% 60px;">
+	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">KẾT QUẢ TÌM KIẾM</h2>
+	<?php foreach ($get_result_search as $room):;?>
+		<div class="col col-sm-4 room">
+			<article class="room_detail" style="min-height: 403px;">
+				<div class="item-image" >
+					<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong201.png">
+				</div>
 
-
-				</article>
-			</div>
-			<div class="col col-md-5 col-xs-12 room">
 				<div class="room_content">
 					<h3>
 						<div class="room_title pull-left">
-							<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>
+							<p><?php $type=get_room_type_id($room['room_type_id']);echo $type['name']; ?></p>
 						</div>
 						<div class="room_price pull-right">
-							<p > <?php echo $rooms['price'];?><sup>đ</sup></p>
+							<p ><?php echo $room['price'];?><sup>đ</sup></p>
 						</div>
 					</h3>
 					<div class="clearfix"></div>
 					<div class="room_description">
-						<p><?php echo $rooms['description'];?></p>
+						<p><?php echo substr($room['description'],0,150)." ... ";?></p>
 					</div>
 					<div class="clearfix"></div>
-				</div>
-			</div>
-<!-- 			<div class="col col-md-5 col-xs-12">
-				<form method="POST" action ="<?php echo $plink;?>/model/add_room_order.php?id=<?php echo $_GET['id']?>" id="form">
-					<div class="row col-md-12" style="padding: 0px; margin:0px;">
-						<section class="panel">
-						      <header class="panel-heading" style="text-align:center">
-						         THÔNG TIN ĐẶT PHÒNG
-						      </header>
-						      <div class="col-md-12" style="padding: 0px; margin:0px;">
-						            <div class="col-md-6 form-group">
-										<label for="1">Tên</label>
-										<input type="text" class="form-control" id="1" name="name" required>
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="">Giới tính</label>
-										<select class="form-control" id="4" name="gender" required="">
-											<option value="">Giới tính</option>
-											<option value="Nam">Nam</option>
-											<option value="Nữ">Nữ</option>
-										</select>
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="5">Ngày sinh</label>
-										<input type="date" class="form-control" id="5" name="birth_day" required>
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="6">Số chứng minh</label>
-										<input type="text" class="form-control" id="6" required pattern="[0-9]{9}" name="passport">
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="7">Điện thoại</label>
-										<input type="tel" class="form-control" id="7" required name="phone">
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="8">Email</label>
-										<input type="email" class="form-control" id="8" required name="email">
-						            </div>
-						            <div class="col-md-6 form-group">
-										<label for="9">Địa chỉ</label>
-										<input type="text" class="form-control" name="adress" id="9" required>
-						            </div>
-					                <div class="col-md-6 form-group">
-									<label for="10">Thành phố</label>
-									<select class="form-control" id="10" name="city" required>
-										<option value="">Thành phố</option>
-										<?php foreach ($cities  as $city ):;?>
-										<option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
-										<?php endforeach;?>
-									</select>
-					              	</div>
-					              	<div class="col-md-5">
-									</div>			              
-									<button onclick="return confirm('Bạn có muốn đặt phòng?')?true:false;" type="submit" class="btn btn-primary">Đặt phòng
-									</button>
-
-									<div class="col-md-5">
-									</div>
-								</div>
-							</section>					
+					<div class="room_button" >
+						<a class="btn-book btn btn-info pull-right" href="./order_room.php?room_id=<?php echo $room['id']?>"><span>Đặt ngay</span></a>
+<!-- 						<a class="btn-book btn btn-info pull-right" href="controller/room_detail?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a> -->
 					</div>
-				</form>
-
-			</div>								
-		</div> -->
+				</div>
+			</article>
+		</div>
+	<?php endforeach;?>										
 	</div>
+</div>
 	<?php include('include/footer.php'); ?>
 </body>
 </html>
+
+
+

@@ -1,9 +1,9 @@
 <?php
 	$room_id = ($_GET['room_id']);
-require_once('./admin/include/config.php');
-	require_once('./admin/include/room_db.php');
-	require_once('./admin/include/get_list.php');
-	require_once('./admin/link.php');
+require_once('admin/include/config.php');
+	require_once('admin/include/room_db.php');
+	require_once('admin/include/get_list.php');
+	require_once('admin/link.php');
 	$rooms=get_room($room_id);
 	$cities=get_city();
 ?>
@@ -170,27 +170,25 @@ require_once('./admin/include/config.php');
 						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong101.jpg">
 					</div>
 
-
+					<div class="room_content">
+						<h3>
+							<div class="room_title pull-left">
+								<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>
+							</div>
+							<div class="room_price pull-left">
+								<p > <?php echo $rooms['price'];?><sup>đ</sup></p>
+							</div>
+						</h3>
+						<div class="clearfix"></div>
+						<div class="room_description">
+							<p><?php echo $rooms['description'];?></p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
 				</article>
 			</div>
-			<div class="col col-md-5 col-xs-12 room">
-				<div class="room_content">
-					<h3>
-						<div class="room_title pull-left">
-							<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>
-						</div>
-						<div class="room_price pull-right">
-							<p > <?php echo $rooms['price'];?><sup>đ</sup></p>
-						</div>
-					</h3>
-					<div class="clearfix"></div>
-					<div class="room_description">
-						<p><?php echo $rooms['description'];?></p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-<!-- 			<div class="col col-md-5 col-xs-12">
+
+			<div class="col col-md-5 col-xs-12">
 				<form method="POST" action ="<?php echo $plink;?>/model/add_room_order.php?id=<?php echo $_GET['id']?>" id="form">
 					<div class="row col-md-12" style="padding: 0px; margin:0px;">
 						<section class="panel">
@@ -252,7 +250,7 @@ require_once('./admin/include/config.php');
 				</form>
 
 			</div>								
-		</div> -->
+		</div>
 	</div>
 	<?php include('include/footer.php'); ?>
 </body>

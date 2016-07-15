@@ -4,7 +4,7 @@
 	require_once('./admin/include/get_list.php');
 	$rooms=get_list_room();
 ?>
-<div class="container">
+<div class="container" style="background: #fff;">
 	<div class="row" style="width:100%;">
 	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
 	<?php foreach ($rooms as $room):;?>
@@ -29,7 +29,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="room_button" >
-						<a class="btn-book btn btn-info pull-right" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a>
+						<a class="btn-book btn btn-info pull-right" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Chi tiết</span></a>
 <!-- 						<a class="btn-book btn btn-info pull-right" href="controller/room_detail?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a> -->
 					</div>
 				</div>
