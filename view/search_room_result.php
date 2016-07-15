@@ -23,7 +23,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="room_button" >
-						<a class="btn-book btn btn-info pull-right" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a>
+						<a class="btn-book btn btn-info pull-right" href="../model/add_room_order.php"><span>Đặt ngay</span></a>
 <!-- 						<a class="btn-book btn btn-info pull-right" href="controller/room_detail?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a> -->
 					</div>
 				</div>
