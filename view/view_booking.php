@@ -18,19 +18,19 @@
 <!--start-date-piker-->
 
 	<ul style="margin-top: 10px;">
-		<form>		
+		<form method="POST" action="controller/search_room_result.php">		
 		<li  class="col-lg-4">
 			<h5>Ngày nhận phòng :</h5>
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd1">
+			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="date" class="span2 date_book" name="date_check_in" required>
 
 		</li>
 		<li  class="col-lg-4">
 			<h5>Ngày trả phòng:</h5>						
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" value="" id="dpd2">							
+			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="date" class="span2 date_book" name="date_checkout" required>							
 		</li>
 		<li class="col-lg-4">
 			<h5>Loại phòng</h5>
-				<select style="background: #fff !important;border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; color: #0098da !important;" >
+				<select style="background: #fff !important;border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; color: #0098da !important;" name="type_room" required>
 					<?php foreach ($room_types as $room_type):;?>
 						<option style="color: #0098da !important; " value="<?php echo $room_type['id'];?>"><?php echo $room_type['name'];?></option>
 					<?php endforeach;?>
@@ -38,7 +38,7 @@
 		</li>
 		<div class="clearfix"></div>
 		<li class="col-lg-12 " style="margin-top:20px; margin-bottom: 20px;">
-			<button type="button" class="btn-book btn btn-info pull-right">Tìm Phòng</button>
+			<button type="submit" class="btn-book btn btn-info pull-right">Tìm Phòng</button>
 		</li>
 		</form>
 	</ul>
