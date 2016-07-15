@@ -1,9 +1,9 @@
 <?php
 	$room_id = ($_GET['room_id']);
-require_once('./admin/include/config.php');
-	require_once('./admin/include/room_db.php');
-	require_once('./admin/include/get_list.php');
-	require_once('./admin/link.php');
+require_once('../admin/include/config.php');
+	require_once('../admin/include/room_db.php');
+	require_once('../admin/include/get_list.php');
+	require_once('../admin/link.php');
 	$rooms=get_room($room_id);
 	$cities=get_city();
 ?>
@@ -160,7 +160,7 @@ require_once('./admin/include/config.php');
 </head>
 <body>
 <?php
-	include('include/menu.php');
+	include('../include/menu.php');
 ?>
 	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
 		<div class="row" style="width:90%; margin:auto;">
@@ -252,6 +252,6 @@ require_once('./admin/include/config.php');
 			</div>								
 		</div>
 	</div>
-	<?php include('include/footer.php'); ?>
+	<?php include('../include/footer.php'); ?>
 </body>
 </html>
