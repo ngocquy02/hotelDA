@@ -3,7 +3,7 @@
 
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-12 col-lg-12">
+	<form method="POST" class="col-sm-12 col-lg-12" action="<?php echo $plink;?>/model/add_service_order.php?id=<?php echo $_GET['id']?>">
 			<div class="row col-md-12">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -18,28 +18,18 @@
 										<th class="col-md-3">Mô tả </th>
 										<th class="col-md-2">Giá / 1</th>
 										<th class="col-md-2">Số lượng</th>
-										<th class="col-md-2">Tùy chọn</th>
-										
 									</tr>
 								</thead>
 								<tbody>
-								<?php foreach ($services as $service):?>
-									<form method="POST" action="<?php echo $plink;?>/model/add_service_order.php?id=<?php echo $service['id']?>">
+								<?php $i = 0; foreach ($services as $service):?>
 									<tr>
 										<th scope="row"><?php echo $service['name']; ?></th>
 										<td><?php echo $service['description']; ?></td>
 										<td><?php echo $service['price']; ?></td>
-										<td><input type="number" name="quantity"></td>
-										<td>												
-											<button onclick="return confirm('Bạn có muốn thêm dịch vụ?')?true:false;" style="color:#30a5ff;">
-												<svg class="glyph stroked plus sign" style="height: 15;width:15;">
-												<use xlink:href="#stroked-plus-sign"/>
-												</svg>
-											Thêm<?php $_SESSION['room_order_id']=$_GET['id'];$_SESSION['price']=$service['price'];?>
-											</button>
-										</td>
+										<td><input type="number" name="quantity<?php $i++; echo $i; ?>" value="0" min="0"></td>
+											<input type="text" name="id<?php echo $i; ?>" value="<?php echo $service['id']; ?>" style="display:none;">
+											<input type="text" name="price<?php echo $i; ?>" value="<?php echo $service['price']; ?>" style="display:none;">
 									</tr>
-									</form>
 								<?php endforeach?>
 								</tbody>
 							</table>
@@ -50,7 +40,10 @@
 					</section>
 				</div>
 			</div>
-	</form>
+			<div class="col-md-5"></div>
+			<button onclick="return confirm('Bạn có muốn thêm dịch vụ không?')?true:false;" type="submit" class="col-md-2 btn btn-primary">Thêm</button>
+			<div class="col-md-5"></div>	
+		</form>
 	</div>
 		</body>
 		</html>

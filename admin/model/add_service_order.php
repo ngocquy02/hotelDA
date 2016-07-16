@@ -4,13 +4,15 @@
         require_once('../include/admin_db.php');
         require_once('../include/service_db.php');
         require_once('../include/room_db.php');
+        $service=get_list_service();
 		session_start();
-		if (isset($_SESSION['email'])==NULL || $_GET['id']=NULL) {
+		if (isset($_SESSION['email'])==NULL || $_GET['id']==NULL) {
 			header ("Location: $plink");
 	}
-		add_room_service($_SESSION['room_order_id'],$_GET['id'];$_SESSION['price'],$_POST['quantity']);
-
-
-   echo "thêm thành công";
-
-	?>
+	
+		for ($i=1; $i <=count(get_list_service()) ; $i++) { 
+			add_room_service($_GET['id'],$_POST["id$i"],$_POST["price$i"],$_POST["quantity$i"]);		
+	}
+  
+				
+	?> 
