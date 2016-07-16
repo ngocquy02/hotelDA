@@ -10,11 +10,10 @@
 			<div class="top-menu">
 				<span class="menu"></span> 
 				<ul class="cl-effect-1">
-					<li><a class="scroll" href="#home">TRANG CHỦ</a></li>
-					<li><a class="scroll" href="#brief">PHÒNG</a></li>
+					<li><a class="scroll" href="index.html">TRANG CHỦ</a></li>
+					<li><a class="scroll" href="booking_room.php">ĐẶT PHÒNG</a></li>
 					<li><a class="scroll" href="#features">THÔNG TIN</a></li>
 					<li><a class="scroll" href="#screenshots">HÌNH ẢNH</a></li>
-					<li><a class="scroll" href="#testimonial">ĐẶT TOUR DU LỊCH</a></li>
 					<li><a class="scroll" href="#contact">LIÊN HỆ</a></li>
 				</ul>
 			</div>

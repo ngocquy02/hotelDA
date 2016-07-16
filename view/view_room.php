@@ -8,8 +8,8 @@
 	<div class="row" style="width:100%;">
 	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
 	<?php foreach ($rooms as $room):;?>
-		<div class="col col-sm-4 room">
-			<article class="room_detail" style="min-height: 403px;">
+		<div class="col col-sm-4 room" style="padding: 15px;">
+			<article class="room_detail">
 				<div class="item-image" >
 					<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong201.png">
 				</div>
@@ -29,8 +29,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="room_button" >
-						<a class="btn-book btn btn-info pull-right" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Chi tiết</span></a>
-<!-- 						<a class="btn-book btn btn-info pull-right" href="controller/room_detail?room_id=<?php echo $room['id'];?>"><span>Đặt ngay</span></a> -->
+						<a class="btn-book btn btn-info" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Chi tiết</span></a>
 					</div>
 				</div>
 			</article>
