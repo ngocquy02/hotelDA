@@ -3,7 +3,7 @@
 
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-12 col-lg-12" action="<?php echo $plink;?>/model/add_service_order.php?id=<?php echo $service['id']?>">
+	<form method="POST" class="col-sm-12 col-lg-12" action="<?php echo $plink;?>/model/add_service_order.php?id=<?php echo $_GET['id']?>">
 			<div class="row col-md-12">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -21,15 +21,15 @@
 									</tr>
 								</thead>
 								<tbody>
-								<?php foreach ($services as $service):?>
-									<form method="POST" action="">
+								<?php $i = 0; foreach ($services as $service):?>
 									<tr>
 										<th scope="row"><?php echo $service['name']; ?></th>
 										<td><?php echo $service['description']; ?></td>
 										<td><?php echo $service['price']; ?></td>
-										<td><input type="number" name="quantity" value="0" min="0"></td>
+										<td><input type="number" name="quantity<?php $i++; echo $i; ?>" value="0" min="0"></td>
+											<input type="text" name="id<?php echo $i; ?>" value="<?php echo $service['id']; ?>" style="display:none;">
+											<input type="text" name="price<?php echo $i; ?>" value="<?php echo $service['price']; ?>" style="display:none;">
 									</tr>
-									</form>
 								<?php endforeach?>
 								</tbody>
 							</table>

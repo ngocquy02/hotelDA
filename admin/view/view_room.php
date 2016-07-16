@@ -45,7 +45,7 @@
 										<td><?php echo $order['price'];?></td>
 										<td>
 											<li style="list-style-type: none;">
-												<a href="<?php echo $plink;?>/controller/user.php?id=<?php echo $order['id']?>" style="font-size:12px">
+												<a href="<?php echo $plink;?>/controller/detail.php?id=<?php echo $order['id']?>" style="font-size:12px">
 													<svg class="glyph stroked clipboard with paper" style="height: 15;width:15;">
 													<use xlink:href="#stroked-clipboard-with-paper"/>
 													</svg>
