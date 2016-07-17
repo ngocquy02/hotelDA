@@ -22,9 +22,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="admin/js/typed.js" type="text/javascript"></script>
 <link href="admin/css/styles.css" rel="stylesheet">
-
-
-
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {

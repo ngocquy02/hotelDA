@@ -90,7 +90,9 @@ require_once('admin/include/config.php');
 									</select>
 					              	</div>
 					              	<div class="col-md-5">
-									</div>			              
+									</div>
+
+             
 									<button id="button"  type="submit" class="btn btn-primary">Đặt phòng
 									</button>
 									<div id="modal">

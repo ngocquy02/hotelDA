@@ -1,16 +1,87 @@
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <a href="../index.html"><button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button></a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<?php
+  $room_id = ($_GET['room_id']);
+require_once('admin/include/config.php');
+  require_once('admin/include/room_db.php');
+  require_once('admin/include/get_list.php');
+  require_once('admin/link.php');
+  $rooms=get_room($room_id);
+  $cities=get_city();
+?>
+<!DOCTYPE html>
+<html>
+<?php include('include/head.php'); ?>
+<body>
+<?php
+  include('include/menu.php');
+?>
+  <div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
+    <div class="row" style="width:90%; margin:auto;">
+
+      <div class="col col-md-10 col-xs-12">
+        <form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id']?>" id="form">
+          <div class="row col-md-12" style="padding: 0px; margin:0px;">
+            <section class="panel">
+                  <header class="panel-heading" style="text-align:center">
+                     THÔNG TIN ĐẶT PHÒNG
+                  </header>
+                  <div class="col-md-12" style="padding: 0px; margin:0px;">
+                    <div class="col-md-6 form-group">
+                    <label for="1">Tên</label>
+                    <input type="text" class="form-control" id="1" name="name" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="">Giới tính</label>
+                    <select class="form-control" id="4" name="gender" required="">
+                      <option value="">Giới tính</option>
+                      <option value="Nam">Nam</option>
+                      <option value="Nữ">Nữ</option>
+                    </select>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="5">Ngày sinh</label>
+                    <input type="date" class="form-control" id="5" name="birth_day" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="6">Số chứng minh</label>
+                    <input type="text" class="form-control" id="6" required pattern="[0-9]{9}" name="passport">
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="7">Điện thoại</label>
+                    <input type="tel" class="form-control" id="7" required name="phone">
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="8">Email</label>
+                    <input type="email" class="form-control" id="8" required name="email">
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                    <label for="9">Địa chỉ</label>
+                    <input type="text" class="form-control" name="adress" id="9" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                  
+                  <label for="10">Thành phố</label>
+                  <select class="form-control" id="10" name="city" required>
+                    <option value="">Thành phố</option>
+                    <?php foreach ($cities  as $city ):;?>
+                    <option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
+                    <?php endforeach;?>
+                  </select>
+                  </div>
+                </div>
+              </section>          
+          </div>
+        </form>
+
+      </div>                
+    </div>
+  </div>
+  <?php include('include/footer.php'); ?>
+</body>
+</html>
