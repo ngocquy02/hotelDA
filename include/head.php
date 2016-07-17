@@ -6,6 +6,7 @@
 <meta name="description" content="Nhà nghỉ giá rẽ tại đà nẵng, tiện nghi sang trọng, thoáng mát sạch sẽ, vị trí đắc địa" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
+<link href="css/popup.css" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
 <!--animated-css-->
@@ -18,8 +19,12 @@
 <script src="admin/js/jquery-1.12.4.min.js"></script>
 <script src="admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="admin/js/bootstrap-datepicker.js"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="admin/js/typed.js" type="text/javascript"></script>
 <link href="admin/css/styles.css" rel="stylesheet">
+
+
+
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {
@@ -46,9 +51,6 @@
 		});
 </script>
 
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="admin/js/typed.js" type="text/javascript"></script>
     <script>
     $(function(){
 
@@ -76,9 +78,24 @@
     function foo(){ console.log("Callback"); }
 
     </script>
-<style type="text/css">
+<!-- popup -->
 
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.reveal.js"></script>
 
-</style>
-
+<!--  -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#button').click(function(e) { // Button which will activate our modal
+                $('#modal').reveal({ // The item which will be opened with reveal
+                    animation: 'fade',                   // fade, fadeAndPop, none
+                    animationspeed: 600,                       // how fast animtions are
+                    closeonbackgroundclick: true,              // if you click background will modal close?
+                    dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                });
+            return false;
+            });
+        });
+    </script>
 </head>

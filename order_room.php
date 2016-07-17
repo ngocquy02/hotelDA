@@ -91,8 +91,20 @@ require_once('admin/include/config.php');
 					              	</div>
 					              	<div class="col-md-5">
 									</div>			              
-									<button onclick="return confirm('Bạn có muốn đặt phòng?')?true:false;" type="submit" class="btn btn-primary">Đặt phòng
+									<button id="button"  type="submit" class="btn btn-primary">Đặt phòng
 									</button>
+									<div id="modal">
+										<div id="heading">
+											Thông báo
+										</div>
+
+										<div id="content">
+										<p>Bạn có chắc chắn sẽ đặt phòng này chứ?</p>
+											<button onclick="return true;" class="button green close"><img src="images/tick.png"><h4 style="margin-top:5px; color: #fff;">Có</h4></button> 
+
+											<button onclick="return false;" class="button red close"><img src="images/cross.png"><h4 style="margin-top:5px; color: #fff;">Không</h4></button>
+										</div>
+									</div>
 
 									<div class="col-md-5">
 									</div>
