@@ -1,11 +1,13 @@
 <?php
-  $room_id = ($_GET['room_id']);
-require_once('admin/include/config.php');
+  require_once('admin/include/config.php');
   require_once('admin/include/room_db.php');
   require_once('admin/include/get_list.php');
+  require_once('admin/include/customer_db.php');
   require_once('admin/link.php');
-  $rooms=get_room($room_id);
-  $cities=get_city();
+  $max_id= get_room_order_max_id();
+  $room=get_room($max_id['room_id']);
+  $customer=get_customer_id($max_id['customer_id']);
+  $city=get_city_id($customer['city_id']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,56 +29,56 @@ require_once('admin/include/config.php');
                   <div class="col-md-12" style="padding: 0px; margin:0px;">
                     <div class="col-md-6 form-group">
                     <label for="1">Phòng</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo $room['name'] ;?>" disabled>
                     </div><div class="col-md-6 form-group">
                     <label for="1">Ngày đặt</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo date('d/m/Y',strtotime($max_id['date_order'] ));?>" disabled>
                     </div><div class="col-md-6 form-group">
                     <label for="1">Ngày đến</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo date('d/m/Y',strtotime($max_id['date_check_in']))  ;?>" disabled>
                     </div><div class="col-md-6 form-group">
                     <label for="1">Ngày đi</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo date('d/m/Y',strtotime($max_id['date_checkout'])) ;?>" disabled>
                     </div>
                     <div class="col-md-6 form-group">
                     <label for="1">Tên</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo $customer['name'] ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="">Giới tính</label>
-                      <input type="text" class="form-control" id="1" disabled>
+                      <input type="text" class="form-control" id="1" value="<?php echo $customer['gender'];?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="5">Ngày sinh</label>
-                    <input type="date" class="form-control" id="5" disabled>
+                    <input type="date" class="form-control" id="5" value="<?php echo date('d/m/Y',strtotime( $customer['birth_day'])) ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="6">Số chứng minh</label>
-                    <input type="text" class="form-control" id="6" disabled>
+                    <input type="text" class="form-control" id="6" value="<?php echo $customer['passport'] ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="7">Điện thoại</label>
-                    <input type="tel" class="form-control" id="7" disabled>
+                    <input type="tel" class="form-control" id="7" value="<?php echo $customer['phone']  ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="8">Email</label>
-                    <input type="email" class="form-control" id="8" disabled>
+                    <input type="email" class="form-control" id="8" value="<?php echo $customer['email'] ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="9">Địa chỉ</label>
-                    <input type="text" class="form-control" id="9" disabled>
+                    <input type="text" class="form-control" id="9" value="<?php echo $customer['adress']  ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                   
                   <label for="10">Thành phố</label>
-                    <input type="text" class="form-control" id="1" disabled>
+                    <input type="text" class="form-control" id="1" value="<?php echo $city['name'] ;?>" disabled>
                   </div>
                 </div>
               </section>          

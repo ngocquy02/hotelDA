@@ -236,22 +236,27 @@ function get_result_search($date_check_in,$date_checkout,$room_type_id) {
         $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        echo $error_message;
+        display_db_error($error_message);
+    }
+}
 
-    //  $query = 'SELECT * FROM room WHERE id NOT IN (
-    //     SELECT `room_id` FROM `room_order` WHERE
-    //         (date_check_in >= :date_check_in AND date_check_in <= :date_checkout) OR
-    //         (date_checkout >= :date_check_in AND date_checkout <= :date_checkout) OR
-    //         (date_check_in <= :date_check_in AND date_checkout >= :date_checkout)
-    // ) AND room_type_id=:room_type_id';
-    // try {
-    //     $statement = $db->prepare($query);
-    //     $statement->bindValue(':date_check_in', $date_check_in);
-    //     $statement->bindValue(':date_checkout', $date_checkout);
-    //     $statement->bindValue(':room_type_id', $room_type_id);
-    //     $statement->execute();
-    //     $result = $statement->fetchAll();
-    //     $statement->closeCursor();
-    //     return $result;
+
+// select max room order ID
+//SELECT * FROM room_order ORDER BY ID DESC LIMIT 1
+
+
+function get_room_order_max_id() {
+    global $db;
+    $query = 'SELECT * FROM room_order ORDER BY ID DESC LIMIT 1';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         echo $error_message;
