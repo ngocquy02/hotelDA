@@ -8,6 +8,7 @@
   $room=get_room($max_id['room_id']);
   $customer=get_customer_id($max_id['customer_id']);
   $city=get_city_id($customer['city_id']);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +53,7 @@
 
                     <div class="col-md-6 form-group">
                     <label for="5">Ngày sinh</label>
-                    <input type="date" class="form-control" id="5" value="<?php echo date('d/m/Y',strtotime( $customer['birth_day'])) ;?>" disabled>
+                    <input type="text" class="form-control" id="5" value="<?php echo date('d/m/Y',strtotime( $customer['birth_day'])) ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
@@ -85,7 +86,8 @@
           </div>
         </form>
 
-      </div>                
+      </div> 
+      <div class="col-md-12"> <a class="btn btn-suscess" href="index.html">Quay Lại</a></div>               
     </div>
   </div>
   <?php include('include/footer.php'); ?>

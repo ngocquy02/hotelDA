@@ -17,6 +17,6 @@
       $price= $date * $get_room['price'];
     add_room_order_search($_GET['room_id'],$_SESSION['date_check_in'],$_SESSION['date_checkout'],$date_order,$get_customer['id'],$price,$date);
 
-    header ("Location: ../include/notification.php?room_id=$_GET['room_id']");
+    header ("Location: /hotelDA/notification.php");
   ?>
 

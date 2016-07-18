@@ -1,9 +1,10 @@
 <?php
 	$room_id = ($_GET['room_id']);
-require_once('admin/include/config.php');
+	require_once('admin/include/config.php');
 	require_once('admin/include/room_db.php');
 	require_once('admin/include/get_list.php');
 	require_once('admin/link.php');
+
 	$rooms=get_room($room_id);
 	$cities=get_city();
 ?>
@@ -41,7 +42,7 @@ require_once('admin/include/config.php');
 			</div>
 
 			<div class="col col-md-5 col-xs-12">
-				<form method="POST" action ="notification.php" id="form">
+				<form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id'];?>" id="form">
 					<div class="row col-md-12" style="padding: 0px; margin:0px;">
 						<section class="panel">
 						      <header class="panel-heading" style="text-align:center">
@@ -54,7 +55,7 @@ require_once('admin/include/config.php');
 						            </div>
 						            <div class="col-md-6 form-group">
 										<label for="">Giới tính</label>
-										<select class="form-control" id="4" name="gender" required="">
+										<select class="form-control" id="4" name="gender" required>
 											<option value="">Giới tính</option>
 											<option value="Nam">Nam</option>
 											<option value="Nữ">Nữ</option>
@@ -118,6 +119,7 @@ require_once('admin/include/config.php');
 			</div>								
 		</div>
 	</div>
+
 	<?php include('include/footer.php'); ?>
 </body>
 </html>
