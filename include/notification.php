@@ -17,7 +17,7 @@ require_once('admin/include/config.php');
   <div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
     <div class="row" style="width:90%; margin:auto;">
 
-      <div class="col col-md-10 col-xs-12">
+      <div class="col col-md-12 col-xs-12">
         <form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id']?>" id="form">
           <div class="row col-md-12" style="padding: 0px; margin:0px;">
             <section class="panel">
@@ -26,53 +26,57 @@ require_once('admin/include/config.php');
                   </header>
                   <div class="col-md-12" style="padding: 0px; margin:0px;">
                     <div class="col-md-6 form-group">
+                    <label for="1">Phòng</label>
+                    <input type="text" class="form-control" id="1" disabled>
+                    </div><div class="col-md-6 form-group">
+                    <label for="1">Ngày đặt</label>
+                    <input type="text" class="form-control" id="1" disabled>
+                    </div><div class="col-md-6 form-group">
+                    <label for="1">Ngày đến</label>
+                    <input type="text" class="form-control" id="1" disabled>
+                    </div><div class="col-md-6 form-group">
+                    <label for="1">Ngày đi</label>
+                    <input type="text" class="form-control" id="1" disabled>
+                    </div>
+                    <div class="col-md-6 form-group">
                     <label for="1">Tên</label>
-                    <input type="text" class="form-control" id="1" name="name" required>
+                    <input type="text" class="form-control" id="1" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="">Giới tính</label>
-                    <select class="form-control" id="4" name="gender" required="">
-                      <option value="">Giới tính</option>
-                      <option value="Nam">Nam</option>
-                      <option value="Nữ">Nữ</option>
-                    </select>
+                      <input type="text" class="form-control" id="1" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="5">Ngày sinh</label>
-                    <input type="date" class="form-control" id="5" name="birth_day" required>
+                    <input type="date" class="form-control" id="5" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="6">Số chứng minh</label>
-                    <input type="text" class="form-control" id="6" required pattern="[0-9]{9}" name="passport">
+                    <input type="text" class="form-control" id="6" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="7">Điện thoại</label>
-                    <input type="tel" class="form-control" id="7" required name="phone">
+                    <input type="tel" class="form-control" id="7" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="8">Email</label>
-                    <input type="email" class="form-control" id="8" required name="email">
+                    <input type="email" class="form-control" id="8" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                     <label for="9">Địa chỉ</label>
-                    <input type="text" class="form-control" name="adress" id="9" required>
+                    <input type="text" class="form-control" id="9" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
                   
                   <label for="10">Thành phố</label>
-                  <select class="form-control" id="10" name="city" required>
-                    <option value="">Thành phố</option>
-                    <?php foreach ($cities  as $city ):;?>
-                    <option value="<?php echo $city['id'];?>"><?php echo $city['name'];?></option>
-                    <?php endforeach;?>
-                  </select>
+                    <input type="text" class="form-control" id="1" disabled>
                   </div>
                 </div>
               </section>          

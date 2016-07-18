@@ -41,7 +41,7 @@ require_once('admin/include/config.php');
 			</div>
 
 			<div class="col col-md-5 col-xs-12">
-				<form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id']?>" id="form">
+				<form method="POST" action ="notification.php" id="form">
 					<div class="row col-md-12" style="padding: 0px; margin:0px;">
 						<section class="panel">
 						      <header class="panel-heading" style="text-align:center">
@@ -102,9 +102,9 @@ require_once('admin/include/config.php');
 
 										<div id="content">
 										<p>Bạn có chắc chắn sẽ đặt phòng này chứ?</p>
-											<button onclick="return true;" class="button green close"><img src="images/tick.png"><h4 style="margin-top:5px; color: #fff;">Có</h4></button> 
+											<button onclick="return true;" class="button green close" style="opacity: 1;"><img src="images/tick.png"><h4 style="margin-top:5px; color: #fff;">Có</h4></button> 
 
-											<button onclick="return false;" class="button red close"><img src="images/cross.png"><h4 style="margin-top:5px; color: #fff;">Không</h4></button>
+											<button onclick="return false;" class="button red close" style="opacity: 1;"><img src="images/cross.png"><h4 style="margin-top:5px; color: #fff;">Không</h4></button>
 										</div>
 									</div>
 
