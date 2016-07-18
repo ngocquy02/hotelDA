@@ -52,7 +52,7 @@
 
                     <div class="col-md-6 form-group">
                     <label for="5">Ngày sinh</label>
-                    <input type="date" class="form-control" id="5" value="<?php echo date('d/m/Y',strtotime( $customer['birth_day'])) ;?>" disabled>
+                    <input type="text" class="form-control" id="5" value="<?php echo date('d/m/Y',strtotime( $customer['birth_day'])) ;?>" disabled>
                     </div>
 
                     <div class="col-md-6 form-group">
