@@ -129,6 +129,23 @@ function get_list_room_service() {
     }
 }
 
+//SELECT * FROM room_service
+function get_list_room_service_room_order_id($room_order) {
+    global $db;
+    $query = '
+        SELECT * FROM room_service WHERE room_order_id = :room_order AND quantity > 0';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':room_order', $room_order);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
 function add_room_service($room_order_id,$service_id,$price,$quantity) {
     global $db;
     $query = 'INSERT INTO room_service

@@ -32,7 +32,7 @@
 				              <div class="col-md-6 form-group">
 								<h4>Tình trạng phòng : <?php echo $customer['name']; ?></h4>
 				              </div>
-				              <div class="col-md-6 form-group">
+				              <div class="col-md-6 form-group"> 
 								<h4>Ngày đặt : <?php echo date('d/m/Y',strtotime($room_order['date_order'])) ; ?></h4>
 				              </div>
 				              <div class="col-md-6 form-group">
@@ -48,10 +48,16 @@
 								<h4>Số tiền : <?php echo $room_order['price']; ?> VNĐ</h4>
 				              </div>
 				              <div class="col-md-6 form-group">
-								<h4>Dịch vụ đã dùng :</h4>
+								<h4>Dịch vụ đã dùng :
+								<?php foreach ($room_service as $room_service): ?>
+								 <?php $service=get_service($room_service['service_id']); echo $service['name'].","; ?>
+								<?php endforeach?>
+								</h4>
 				              </div>
 				              <div class="col-md-6 form-group">
-								<h4>Số tiền :</h4>
+								<h4>Số tiền : 
+									<?php echo array_sum($room_service['price'] * $room_service['quantity']);?>
+								</h4>
 				              </div>
 				              <div class="col-md-6 form-group">
 								<h3>Số tiền phải thanh toán </h3>
