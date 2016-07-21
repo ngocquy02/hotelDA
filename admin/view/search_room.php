@@ -2,16 +2,16 @@
 	
 ?>
 
-<div class="col-sm-9 col-sm-offset-3 col-lg-9 col-lg-offset-3 main">
+<div class="col-sm-9 col-sm-offset-3 col-lg-8 col-lg-offset-4 main">
 	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/controller/search_result_room.php">
 			<div class="row">
-				<div class="right col-lg-12">
+				<div class="right col-lg-8">
 				  <section class="panel">
 				      <header class="panel-heading" style="text-align:center">
 				          Tìm phòng
 				      </header>
 				      <div class="panel-body">
-				              <div class="col-md-6 form-group">
+				              <div class="col-md-12 form-group">
 				                <label for="sel17">Loại phòng</label>
 								<select class="form-control" id="sel17" name="type_room" required>
 									<option value="">Loại phòng</option>
@@ -20,27 +20,19 @@
 									<?php endforeach?>
 								</select>
 				              </div>
-				              <div class="col-md-6 form-group">
+				              <div class="col-md-12 form-group">
 				                <label for="dpd1">Ngày đến</label>
 								<input type="date" class="form-control" id="dpd1" name="date_check_in" required>
 				              </div>
-				               <div class="col-md-6 form-group">
+				               <div class="col-md-12 form-group">
 				                <label for="dpd2">Ngày đi</label>
 								<input type="date" class="form-control" id="dpd2" name="date_checkout" required>
 				              </div>
-				              <div class="col-md-3 form-group">
-				                <label for="sel18">Người lớn</label>
-								<input type="number" class="form-control" id="sel18" name="adults" min="1" value="1" required>
-				              </div>
-				              <div class="col-md-3 form-group">
-				                 <label for="sel19">Trẻ em</label>
-								<input type="number" class="form-control" id="sel19" name="childent" min="0" value="0" required>
-				              </div>
 				              <div class="row">
-								<div class="col-md-5">
+								<div class="col-md-4">
 								</div> 
-									<button type="submit" class="col-md-2 btn btn-primary">Tìm</button>
-								<div class="col-md-5">
+									<button type="submit" class="col-md-4 btn btn-primary">Tìm</button>
+								<div class="col-md-4">
 								</div>
 							</div>
 				      </div>

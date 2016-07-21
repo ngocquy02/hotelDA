@@ -18,8 +18,6 @@ $get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checko
 	$_SESSION['date_check_in']=$_POST['date_check_in'];
 	$_SESSION['date_checkout']=$_POST['date_checkout'];
 	$_SESSION['type_room']=$_POST['type_room'];
-	$_SESSION['childent']=$_POST['childent'];
-	$_SESSION['adults']=$_POST['adults'];
 	require_once('../view/search_result_room.php');
 	
 ?>
