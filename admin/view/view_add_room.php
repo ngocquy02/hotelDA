@@ -28,9 +28,6 @@
 							<div class="col-md-6 form-group">
 				                <label for="sel111">Chọn ảnh</label>
 								<input class="form-control" name="hinhanh" type="file" size="30" required>
-
-								<div id="result">
-								</div>
 				             </div>
 				               <div class="col-md-6 form-group">
 				                <label for="sel16">Giá (VNĐ)</label>

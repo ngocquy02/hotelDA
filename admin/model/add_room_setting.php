@@ -26,7 +26,7 @@
 				 add_new_room($_POST['name_room'],$_POST['type_room'],$name_img,$_POST['description'],$_POST['price']);	
 	header ("Location: $plink/controller/room_setting.php");
 				}
-    
+    				echo "<h1>Lỗi khi tải ảnh</h1><br><a href='$plink/controller/add_room_setting.php'><h4>Trở về</h4></a>";
 				}
    
 

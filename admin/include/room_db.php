@@ -59,12 +59,11 @@ function add_new_room($name_room,$room_type_id,$name_img,$description,$price) {
         display_db_error($error_message);
     }
 }
-function update_room($id,$name,$room_type_id,$img,$description,$price) {
+function update_room($id,$room_type_id,$img,$description,$price) {
     global $db;
-    $query = 'UPDATE `room` SET `name`=:name,`room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
+    $query = 'UPDATE `room` SET `room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':name', $name);
         $statement->bindValue(':room_type_id', $room_type_id);
         $statement->bindValue(':img', $img);
         $statement->bindValue(':description', $description);
