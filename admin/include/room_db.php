@@ -35,17 +35,17 @@ function get_list_room() {
     }
 }
 
-function add_room($name,$room_type_id,$img,$description,$price) {
+function add_new_room($name_room,$room_type_id,$name_img,$description,$price) {
     global $db;
     $query = 'INSERT INTO room
                  (`name`, `room_type_id`, `img`, `description`, `price`)
               VALUES
-                 (:name, :room_type_id, :img, :description, :price)';
+                 (:name_room, :room_type_id, :name_img, :description, :price)';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':name', $name);
+        $statement->bindValue(':name_room', $name_room);
         $statement->bindValue(':room_type_id', $room_type_id);
-        $statement->bindValue(':img', $img);
+        $statement->bindValue(':name_img', $name_img);
         $statement->bindValue(':description', $description);
         $statement->bindValue(':price', $price);
         $statement->execute();
@@ -59,7 +59,6 @@ function add_room($name,$room_type_id,$img,$description,$price) {
         display_db_error($error_message);
     }
 }
-
 function update_room($id,$name,$room_type_id,$img,$description,$price) {
     global $db;
     $query = 'UPDATE `room` SET `name`=:name,`room_type_id`=:room_type_id,`img`=:img,`description`=:description,`price`=:price WHERE id=:id';
