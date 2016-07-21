@@ -3,7 +3,7 @@
 ?>
 	
 	<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/add_room_setting.php">
+	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/add_room_setting.php" enctype="multipart/form-data">
 			<div class="row">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -14,7 +14,7 @@
 				              <div class="col-md-6 form-group">
 								<label for="sel10">Tên Phòng</label>
 								<input type="text" class="form-control" id="sel10" value="<?php echo "Phòng ".$count ;?>" disabled>
-								<input type="text" class="form-control" id="sel10" value="<?php echo "Phòng ".$count ;?>" style="display:none;" name="name" required>   
+								<input type="text" class="form-control" id="sel10" value="<?php echo "Phòng ".$count ;?>" style="display:none;" name="name_room" required>   
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel17">Loại phòng</label>
@@ -25,7 +25,10 @@
 									<?php endforeach?>
 								</select>
 				              </div>
-								
+							<div class="col-md-6 form-group">
+				                <label for="sel111">Chọn ảnh</label>
+								<input class="form-control" name="hinhanh" type="file" size="30" required>
+				             </div>
 				               <div class="col-md-6 form-group">
 				                <label for="sel16">Giá (VNĐ)</label>
 								<input type="text" class="form-control" id="sel16" name="price" required>
@@ -46,4 +49,4 @@
 				</div>
 				</div>
 				</form>
-			
+				

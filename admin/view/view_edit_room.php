@@ -3,7 +3,7 @@
 	?>
 
 	<div class="col-sm-9 col-sm-offset-3 col-lg-12 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/edit_service.php?id=<?php echo $_GET['id']; ?>">
+	<form method="POST" class="col-sm-9 col-lg-10" action ="<?php echo $plink;?>/model/edit_room_setting.php?id=<?php echo $_GET['id']; ?>" enctype="multipart/form-data">
 			<div class="row">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -14,7 +14,6 @@
 				              <div class="col-md-6 form-group">
 								<label for="sel10">Tên Phòng</label>
 								<input type="text" class="form-control" id="sel10" name="name" value="<?php echo $room['name'];?>" disabled>
-								<input type="text" class="form-control" id="sel10" name="name" style="display:none;" value="<?php echo $room['name'];?>" required>
 				              </div>
 				              <div class="col-md-6 form-group">
 								<label for="sel17">Tên Phòng</label>
@@ -28,7 +27,7 @@
 				              </div>
 				              <div class="col-md-6 form-group">
 				                <label for="sel15">Hình ảnh</label>
-								<input type="text" class="form-control" id="sel15" name="img" value="<?php echo $room['img'];?>" required>
+								<input class="form-control" name="hinhanh" type="file" size="30" required>
 				              </div>
 				               <div class="col-md-6 form-group">
 				                <label for="sel16">Giá (VNĐ)</label>

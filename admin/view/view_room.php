@@ -3,7 +3,7 @@
 
 ?>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-	<form method="POST" class="col-sm-12 col-lg-12">
+	
 			<div class="row col-md-12">
 				<div class="right col-lg-12">
 				  <section class="panel">
@@ -19,6 +19,7 @@
 										<th class="col-md-1">Đặt phòng</th>
 										<th class="col-md-1">Ngày đến</th>
 										<th class="col-md-1">Ngày đi</th>
+										<th class="text-center">Trạng thái</th>
 										<th class="col-md-1">Đã ở</th>
 										<th class="col-md-1">Dịch vụ</th>
 										<th class="col-md-1">Số tiền (VNĐ)</th>
@@ -33,7 +34,9 @@
 										<td><?php echo date('d/m/Y',strtotime($order['date_order']));?></td>
 										<td><?php echo date('d/m/Y',strtotime($order['date_check_in']));?></td>
 										<td><?php echo date('d/m/Y',strtotime($order['date_checkout']));?></td>
-										<td><?php echo $order['quantity']." Ngày";?></td>
+										<td class="text-center"><?php if($order['status_id']=='1')
+										{echo "Đã trả phòng ";}else{echo 'Có khách<a href="#" onclick="return confirm("Bạn có chắc chắn muốn sửa không?")?true:false;" class="btn btn-primary">Trả phòng</a>';}?></td>
+										<td><?php echo $order['quantity'].' Ngày';?></td>
 										<td>												
 											<a href="<?php echo $plink;?>/controller/add_service_order.php?id=<?php echo $order['id'];?>" style="font-size:12px">
 												<svg class="glyph stroked plus sign" style="height: 15;width:15;">
@@ -65,7 +68,6 @@
 					</section>
 				</div>
 			</div>
-	</form>
 	</div>
 		</body>
 		</html>
