@@ -15,11 +15,21 @@
 <html>
 <?php include('include/head.php'); ?>
 <body>
-<div>
+<div class="wrapper-body">
 	<?php
 		include('include/menu.php');
 		include('view/view_booking.php');
 		include('view/view_room.php');
+?>
+<div class="container">
+
+<?php
+	include('include/slide.php');
+	include('include/lienhe.php');
+
+?>
+</div>
+	<?php
 		include('include/footer.php');
 	?>
 </div>

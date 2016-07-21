@@ -40,8 +40,9 @@ require_once('./admin/include/config.php');
 						<p><?php echo $rooms['description'];?></p>
 					</div>
 					<div class="clearfix"></div>
-					<button onclick="return confirm('Bạn có muốn đặt phòng?')?true:false;" type="submit" class="btn btn-primary">Đặt phòng
+					<a href="order_room.php?room_id=<?php echo $rooms['id'];?>"><button type="submit" class="btn btn-primary">Đặt phòng
 					</button>
+					</a>
 				</div>
 			</div>
 	</div>

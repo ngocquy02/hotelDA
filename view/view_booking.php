@@ -4,12 +4,22 @@
 	require_once('./admin/include/get_list.php');
 	$room_types=get_room_type();
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/datepicker.css" rel="stylesheet" />
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+</head>
+<body>
 <div class="banner-text fadeInUp" >
 	<h1 class="book_title">
 	        <div id="typed-strings">
-                <span>Chào mừng bạn !</span>
-                <p>Đến với Blue River Hotel</p>
-                <p>Tìm phòng Ngay !</p>
+                <span>ĐẶT PHÒNG</span>
             </div>
             <span id="typed" style="white-space:pre;"></span>
     </h1>
@@ -21,12 +31,12 @@
 		<form method="POST" action="search_room_result.php">		
 		<li  class="col-lg-4">
 			<h5>Ngày nhận phòng :</h5>
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="date" class="span2 date_book" name="date_check_in" required>
+			<input id="dpd1" style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" name="date_check_in" required placeholder="dd/mm/yyyy">
 
 		</li>
 		<li  class="col-lg-4">
 			<h5>Ngày trả phòng:</h5>						
-			<input style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="date" class="span2 date_book" name="date_checkout" required>							
+			<input id="dpd2" style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%; padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" name="date_checkout" required placeholder="dd/mm/yyyy">							
 		</li>
 		<li class="col-lg-4">
 			<h5>Loại phòng</h5>
@@ -46,10 +56,10 @@
 
 </div>
 </div>
-
+</body>
 
 <script type="text/javascript">
-	var nowTemp = new Date();
+    var nowTemp = new Date();
 var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
  
 var checkin = $('#dpd1').datepicker({
@@ -75,3 +85,4 @@ var checkout = $('#dpd2').datepicker({
 
 
 </script>
+</html>

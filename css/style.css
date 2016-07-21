@@ -21,8 +21,9 @@ transition: all 0.5s;
 
 .room_detail{
 padding: 10px;
-border: 1px solid #0098da;
 border-radius: 	10px;
+background-color: #fff;
+box-shadow: 0px 0px 10px #696969;
 }
 
 .room_content h3, .room_content .room_description, .room_content .room_button{
@@ -71,3 +72,15 @@ margin-top:20px;
         50% { opacity:0; }
         100% { opacity:1; }
     }
+
+.wrapper-body{
+    background-image: url("../images/bg.png") !important;
+}
+
+.wrapper-body .container{
+    background: transparent !important;
+}
+
+#jssor_1{
+    width: 760px !important;
+}

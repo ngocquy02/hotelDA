@@ -19,7 +19,7 @@
 <?php
 	include('include/menu.php');
 ?>
-<div class="container" style="background:#fff; width:100%;">
+<div class="container wrapper-body" style="width:100%;">
 	<div class="row" style="width:90%; margin:20px 5% 5% 60px;">
 	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">KẾT QUẢ TÌM KIẾM</h2>
 	<?php foreach ($get_result_search as $room):;?>

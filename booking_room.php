@@ -17,7 +17,7 @@
 <?php
 	include('include/menu.php');
 ?>
-<div class="container" style="background: #fff; width : 100% ; margin: auto;" >
+<div class="container wrapper-body" style=" width : 100% ; margin: auto;" >
 	<div class="row" style="width:90%; margin: auto;">
 	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
 	<?php foreach ($rooms as $room):;?>
