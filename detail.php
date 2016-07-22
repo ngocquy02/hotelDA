@@ -19,7 +19,7 @@ require_once('./admin/include/config.php');
 			<div class="col col-md-7 col-xs-12 room">
 				<article class="" style="min-height: 403px;">
 					<div class="item-image">
-						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong101.jpg">
+						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $rooms['img'];?>">
 					</div>
 
 
