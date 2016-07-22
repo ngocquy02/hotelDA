@@ -11,7 +11,7 @@
 		<div class="col col-sm-4 room" style="padding: 15px;">
 			<article class="room_detail">
 				<div class="item-image" >
-					<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong201.png">
+					<img style="width: 330px;height:222px" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $room['img'];?>">
 				</div>
 
 				<div class="room_content">

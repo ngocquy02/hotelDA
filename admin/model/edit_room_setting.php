@@ -16,7 +16,7 @@
 			// là file ảnh
 			// Tiến hành code upload    
 					// file hợp lệ, tiến hành upload
-					$path = "../images/phong/"; // file sẽ lưu vào thư mục data
+					$path = "../images/room/"; // file sẽ lưu vào thư mục data
 					$tmp_name = $_FILES['hinhanh']['tmp_name'];
 					$name_img = $_FILES['hinhanh']['name'];
 					$type = $_FILES['hinhanh']['type']; 
