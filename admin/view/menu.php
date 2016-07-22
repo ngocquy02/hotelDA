@@ -38,6 +38,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="<?php echo $plink;?>/index.php"><span></span>admin</a>
+				<a class="navbar-brand" href="/hotelDA/index.php"><span></span>Trang chủ</a>
 				<ul class="user-menu" style="text-align:center;">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span class="caret"></span></a>
