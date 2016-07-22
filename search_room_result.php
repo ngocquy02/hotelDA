@@ -7,9 +7,21 @@
 	session_start();
 
 	$rooms=get_list_room();
-	$get_result_search=get_result_search($_POST['date_check_in'],$_POST['date_checkout'],$_POST['type_room']);
-	$_SESSION['date_check_in']=$_POST['date_check_in'];
-	$_SESSION['date_checkout']=$_POST['date_checkout'];
+
+	$date_in = $_POST['date_check_in'];
+	$date_out = $_POST['date_checkout'];
+	// echo $date_in;
+	// echo $date_out;
+	// die;
+	$get_result_search=get_result_search($date_in,$date_out,$_POST['type_room']);
+	// $_SESSION['date_check_in']=$_POST['date_check_in'];
+	// $_SESSION['date_checkout']=$_POST['date_checkout'];
+	// var_dump($date_in);die;
+
+
+	$_SESSION['date_check_in']=$date_in;
+	$_SESSION['date_checkout']=$date_out;
+
 	$_SESSION['type_room']=$_POST['type_room'];
 ?>  
 <!DOCTYPE html>
