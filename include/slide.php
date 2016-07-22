@@ -179,7 +179,7 @@
     </style>
 
 
-    <div class="col-md-8" id="jssor_1" style="position: relative; margin-bottom: 30px; top: 0px; left: 0px; width: 760px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+    <div class="col-md-8" id="jssor_1" style="position: relative; margin-bottom: 30px; top: 0px; left: 0px; width: 760px; height: 456px; overflow: hidden; visibility: hidden; background: transparent;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
