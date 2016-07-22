@@ -9,7 +9,7 @@
 .btn-book{
 color: #0098da !important; 
 background-color: #fff !important; 
-border:1px #0098da solid;
+border:1px #0098da solid !important;
 transition: all 0.5s;	
 }
 .btn-book:hover{
@@ -86,4 +86,13 @@ margin-top:20px;
 
 #jssor_1{
     width: 760px !important;
+}
+
+.form-control {
+    opacity: 0.9;
+    border: 1px solid #0098da !important;
+}
+
+.form-group label{
+    color: #000 !important;
 }

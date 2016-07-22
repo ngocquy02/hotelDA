@@ -19,7 +19,7 @@
 ?>
 <div class="container wrapper-body" style=" width : 100% ; margin: auto;" >
 	<div class="row" style="width:90%; margin: auto;">
-	<h2 class="text-success list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
+	<h2 class="list_room_title" style="text-align:center; margin:20px 0px;">DANH SÁCH PHÒNG</h2>
 	<?php foreach ($rooms as $room):;?>
 		<div class="col col-sm-4 room" style="padding: 15px;">
 			<article class="room_detail">

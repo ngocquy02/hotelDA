@@ -15,10 +15,10 @@
 <?php
 	include('include/menu.php');
 ?>
-	<div class="container" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
+	<div class="container wrapper-body" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
 		<div class="row" style="width:90%; margin:auto;">
 			<div class="col col-md-7 col-xs-12 room">
-				<article class="" style="min-height: 403px;">
+				<article class="" style="min-height: 403px; background:#fff; padding:10px;">
 					<div class="item-image">
 						<img style="width: 100%;" itemprop="thumbnailUrl" alt="" src="images/room/phong101.jpg">
 					</div>
@@ -44,10 +44,8 @@
 			<div class="col col-md-5 col-xs-12">
 				<form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id'];?>" id="form">
 					<div class="row col-md-12" style="padding: 0px; margin:0px;">
-						<section class="panel">
-						      <header class="panel-heading" style="text-align:center">
-						         THÔNG TIN ĐẶT PHÒNG
-						      </header>
+						<section >
+							<h2 class="text-info list_room_title" style="text-align:center; margin:20px 0px;">THÔNG TIN ĐẶT PHÒNG</h2>
 						      <div class="col-md-12" style="padding: 0px; margin:0px;">
 						            <div class="col-md-6 form-group">
 										<label for="1">Tên</label>
