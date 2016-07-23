@@ -77,6 +77,7 @@ function update_room($id,$room_type_id,$img,$description,$price) {
     }
 }
 
+
 function delete_room($id) {
     global $db;
     $query = 'DELETE FROM room WHERE id = :id';

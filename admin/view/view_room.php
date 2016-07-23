@@ -34,8 +34,18 @@
 										<td><?php echo date('d/m/Y',strtotime($order['date_order']));?></td>
 										<td><?php echo date('d/m/Y',strtotime($order['date_check_in']));?></td>
 										<td><?php echo date('d/m/Y',strtotime($order['date_checkout']));?></td>
-										<td class="text-center"><?php if($order['status_id']=='1')
-										{echo "Đã trả phòng ";}else{echo 'Có khách<a href="#" onclick="return confirm("Bạn có chắc chắn muốn sửa không?")?true:false;" class="btn btn-primary">Trả phòng</a>';}?></td>
+										<td class="text-center">
+											<?php $date=strtotime("now");$dd=strtotime($order['date_check_in']);
+												if ($date<$dd && $date) {
+													echo "Đã đặt phòng";
+												}else{
+													if ($order['status_id']==1) {
+														echo "Đã có khách ở";
+													}if($order['status_id']==0){echo "Đã trả phòng";}
+												}
+											?>		
+
+										</td>
 										<td><?php echo $order['quantity'].' Ngày';?></td>
 										<td>												
 											<a href="<?php echo $plink;?>/controller/add_service_order.php?id=<?php echo $order['id'];?>" style="font-size:12px">
