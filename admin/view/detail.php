@@ -51,12 +51,15 @@
 								<h4>Dịch vụ đã dùng :
 								<?php foreach ($room_service as $room_service): ?>
 								 <?php $service=get_service($room_service['service_id']); echo $service['name'].","; ?>
-								<?php endforeach?>
+								<?php endforeach;?>
 								</h4>
 				              </div>
 				              <div class="col-md-6 form-group">
 								<h4>Số tiền : 
-									<?php echo array_sum($room_service['price'] * $room_service['quantity']);?>
+								<?php foreach ($r_service as $r_service): ?>
+									<?php echo $r_service['price']."(VNĐ)" ."&nbsp;X&nbsp;". $r_service['quantity'].",";?>
+								<?php endforeach;?>
+
 								</h4>
 				              </div>
 				              <div class="col-md-6 form-group">
@@ -64,14 +67,16 @@
 				              </div> 
 				              <div class="col-md-6 form-group">
 								<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
-
+									<?php
+										echo $room_order['price'] + $sum['SUM(price*quantity)'] . "&nbsp;(VNĐ)";
+									?>
 								</h3>
 				              </div>
 
 				       </div>
 				       <div class="col-md-4"></div>
 				           <a onclick="return confirm('Thanh toán cho khách hàng?')?true:false;" type="submit" class="col-md-2 btn btn-primary" style=" margin-top:10px;">Thanh toán</a>
-				           <a type="submit" href="#" class="col-md-2 btn btn-primary" style="margin-left:10px; margin-top:10px;" target="blank">In hóa đơn</a>   
+				           <a type="submit" href="<?php echo $plink;?>/controller/bill.php?id=<?php echo $_GET['id'];?>" class="col-md-2 btn btn-primary" style="margin-left:10px; margin-top:10px;" target="blank">In hóa đơn</a>   
 				  </section>
 				</div>
 				</div>

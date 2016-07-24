@@ -13,6 +13,6 @@
 		for ($i=1; $i <=count(get_list_service()) ; $i++) { 
 			add_room_service($_GET['id'],$_POST["id$i"],$_POST["price$i"],$_POST["quantity$i"]);		
 	}
-  
+  		header ("Location: $plink/controller/room.php");
 				
 	?> 

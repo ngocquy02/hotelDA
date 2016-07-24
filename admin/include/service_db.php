@@ -202,6 +202,20 @@ function delete_room_service($id) {
     }
 }
 
-
+function sum_service() {
+    global $db;
+    $query = '
+        SELECT SUM(price*quantity) FROM room_service';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
 
 ?>
