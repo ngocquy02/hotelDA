@@ -2,7 +2,7 @@
 
 ?>
 <div class="col col-md-4 col-xs-12">
-	<form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id'];?>" id="form">
+	<form method="POST" action ="model/send_mail_contact.php" id="form">
 		<div class="row col-md-12" style="background: #fff;padding: 0px;margin:0px;height: 442px; border-radius:10px;">
 			<section>
 				<h2 class="text-info list_room_title" style="text-align:center; margin:20px 0px;">THÔNG TIN LIÊN HỆ</h2>
@@ -21,7 +21,7 @@
 						<input type="email" class="form-control" id="3" required name="email">
 		            </div>
 		           
-					<button id="button" onclick="return true;"  type="submit" class="btn btn-primary">Gửi
+					<button id="button" type="submit" class="btn btn-primary">Gửi 
 					</button>
 				</div>
 			</section>					

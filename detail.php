@@ -40,7 +40,7 @@ require_once('./admin/include/config.php');
 						<p><?php echo $rooms['description'];?></p>
 					</div>
 					<div class="clearfix"></div>
-					<a href="order_room.php?room_id=<?php echo $rooms['id'];?>"><button type="submit" class="btn btn-primary">Đặt phòng
+					<a href="/hotelDA/index.php"><button type="submit" class="btn btn-primary">Đặt phòng
 					</button>
 					</a>
 				</div>

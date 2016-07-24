@@ -6,23 +6,23 @@
 <meta name="description" content="Nhà nghỉ giá rẽ tại đà nẵng, tiện nghi sang trọng, thoáng mát sạch sẽ, vị trí đắc địa" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
-<link href="css/popup.css" rel="stylesheet">
+<link href="/hotelDA/css/popup.css" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
 <!--animated-css-->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link href="css/style.css" rel="stylesheet">
-<link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="images/icon1.png" type="image/x-icon" rel="shortcut icon">
+<link href="/hotelDA/css/style.css" rel="stylesheet">
+<link href="/hotelDA/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/hotelDA/admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/hotelDA/images/icon1.png" type="image/x-icon" rel="shortcut icon">
 
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/datepicker.css" rel="stylesheet" />
-<script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
+<link href="/hotelDA/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/hotelDA/css/datepicker.css" rel="stylesheet" />
+<script src="/hotelDA/js/jquery-1.12.4.min.js"></script>
+<script src="/hotelDA/js/bootstrap.min.js"></script>
+<script src="/hotelDA/js/bootstrap-datepicker.js"></script>
 
-<link href="admin/css/styles.css" rel="stylesheet">
+<link href="/hotelDA/admin/css/styles.css" rel="stylesheet">
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {

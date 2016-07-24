@@ -17,7 +17,7 @@
 <?php
 	include('include/menu.php');
 ?>
-<div class="container wrapper-body" style=" width : 100% ; margin: 0;" >
+<form class="container wrapper-body" style=" width : 100% ; margin: 0;" method="POST" action="/hotelDA/model/send_mail_contact.php">
 	<div class="row" style="width:90%; margin: auto;">
 	<h2 class="list_room_title" style="text-align:center; margin:20px 0px;">LIÊN HỆ</h2>
 	<div class="col-md-12" style="padding: auto 0px; margin:auto;">
@@ -40,15 +40,13 @@
 			<label for="4">Nội Dung</label>
 			<textarea class="form-control" id="4" required name="email" style="height:138px;"></textarea>
 
-            <button style="margin:10px 0; float:right;" id="button" onclick="return true;"  type="submit" class="btn btn-primary">Gửi Đi
-			</button>
-
         </div>
+            <input style="margin:10px 0; float:right;" id="button" onclick="return true;"  type="submit" class="btn btn-primary" value="Gửi Đi">
 
 	</div>								
 	<iframe class="col-md-12" src="https://www.google.com/maps/d/embed?mid=1-KjZNYslWab9NDLm9fhR00hvwkw" style="height:420px; margin:30px 0;"></iframe>	
 	</div>
-</div>
+</form>
 	<?php include('include/footer.php'); ?>
 </body>
 </html>

@@ -14,7 +14,7 @@
 					<li><a class="scroll" href="booking_room.php">ĐẶT PHÒNG</a></li>
 					<li><a class="scroll" href="#features">THÔNG TIN</a></li>
 					<li><a class="scroll" href="#screenshots">HÌNH ẢNH</a></li>
-					<li><a class="scroll" href="#contact">LIÊN HỆ</a></li>
+					<li><a class="scroll" href="contact.php">LIÊN HỆ</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>	 

@@ -81,7 +81,7 @@
                   </div>
                 </div>
               </section>
-              <a href="index.html"><button style="margin-left:15px;" class="btn btn-book">Quay Lại</button> </a>         
+              <a href="/hotelDA/index.html" class="btn btn-book">Quay Lại </a>         
           </div>
 
         </form>
