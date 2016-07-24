@@ -26,8 +26,9 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Liên hệ khách hàng')
   ->setFrom(array('quykrb159@gmail.com' => 'BlueRiver'))
   ->setTo(array('nguyenngocquy020196@gmail.com', 'nguyenngocquy020196@gmail.com' => 'BlueRiver'))
-  ->setBody($_POST['name'])
+  ->setBody("TÊN: ".$_POST['name']."-."."Điện Thoại: ".$_POST['phone']."-"."Email: ".$_POST['email']."-"."Nội dung: ".$_POST['description'])
   ;
 
 // Send the message
 $result = $mailer->send($message);
+header ("Location:/hotelDA/controller/success.php ");

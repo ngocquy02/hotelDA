@@ -28,7 +28,7 @@
 <!--start-date-piker-->
 
 	<ul style="margin-top: 10px;">
-		<form method="POST" action="search_room_result.php">		
+		<form method="POST" action="/hotelDA/controller/search_room_result.php">		
 		<li  class="col-lg-4">
 			<h5>Ngày nhận phòng :</h5>
 			<input id="dpd1" style="background: #fff;  border: 1px solid #0098DA !important;border-radius: 4px !important; width:100%;  padding : 7px 0; padding-left:30px; color: #0098da; background-image: url('images/calendar.png');background-position: center left; background-repeat: no-repeat;" type="text" class="span2 date_book" name="date_check_in" required placeholder="dd/mm/yyyy">

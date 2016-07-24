@@ -1,21 +1,12 @@
 <?php
-	require_once('admin/include/config.php');
-	require_once('admin/include/get_list.php');
-	require_once('admin/include/customer_db.php');
-	require_once('admin/include/room_db.php');
-	require_once('admin/link.php');
-	session_start();
-	if (isset($_SESSION['email'])==NULL || isset($_POST['type_room'])==NULL) {
-		header ("Location: ");
-	}
-	$rooms=get_list_room();
+	
 ?>  
 <!DOCTYPE html>
 <html>
-<?php include('include/head.php'); ?>
+<?php include('../include/head.php'); ?>
 <body>
 <?php
-	include('include/menu.php');
+	include('../include/menu.php');
 ?>
 <div class="container wrapper-body" style=" width : 100% ; margin: auto;" >
 	<div class="row" style="width:90%; margin: auto;">
@@ -24,7 +15,7 @@
 		<div class="col col-sm-4 room" style="padding: 15px;">
 			<article class="room_detail">
 				<div class="item-image" >
-					<img style="width:100%;" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $room['img'];?>">
+					<img style="width:100%;height:225px;" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $room['img'];?>">
 				</div>
 
 				<div class="room_content">
@@ -42,7 +33,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="room_button" >
-						<a class="btn-book btn btn-info" href="detail.php?room_id=<?php echo $room['id'];?>"><span>Chi tiết</span></a>
+						<a class="btn-book btn btn-info" href="/hotelDA/controller/detail.php?room_id=<?php echo $room['id'];?>"><span>Chi tiết</span></a>
 					</div>
 				</div>
 			</article>
@@ -50,7 +41,7 @@
 	<?php endforeach;?>										
 	</div>
 </div>
-	<?php include('include/footer.php'); ?>
+	<?php include('../include/footer.php'); ?>
 </body>
 </html>
 

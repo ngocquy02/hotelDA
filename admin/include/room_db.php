@@ -52,8 +52,8 @@ function add_new_room($name_room,$room_type_id,$name_img,$description,$price) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -150,8 +150,8 @@ function add_room_order($room_id,$status_id,$note,$date_check_in,$date_checkout,
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -177,8 +177,8 @@ function add_room_order_search($room_id,$date_check_in,$date_checkout,$date_orde
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -217,7 +217,7 @@ function delete_room_order($id) {
 function get_result_search($date_check_in,$date_checkout,$room_type_id) {
     global $db;
     $query = 'SELECT * FROM room WHERE id NOT IN (
-        SELECT `room_order`.id FROM `room_order` WHERE
+        SELECT `room_id` FROM `room_order` WHERE
             (date_check_in >= :date_check_in AND date_check_in <= :date_checkout) OR
             (date_checkout >= :date_check_in2 AND date_checkout <= :date_checkout2) OR
             (date_check_in <= :date_check_in3 AND date_checkout >= :date_checkout3)

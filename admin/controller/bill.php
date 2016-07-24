@@ -13,7 +13,6 @@
 		$customer=get_customer_id($room_order['customer_id']);
 		$room_service=get_list_room_service_room_order_id($_GET['id']);
 		$r_service=get_list_room_service_room_order_id($_GET['id']);
-		$sum=sum_service();
 		$room=get_room($room_order['room_id']);
 		require_once('../view/bill.php');
 ?>

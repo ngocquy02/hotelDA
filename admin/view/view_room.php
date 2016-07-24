@@ -55,14 +55,14 @@
 											Thêm
 											</a>
 										</td>
-										<td><?php echo $order['price'];?></td>
+										<td><?php $sum=sum_service($order['id']); echo $sum['SUM(price*quantity)'] +$order['price'];?></td>
 										<td>
 											<li style="list-style-type: none;">
 												<a href="<?php echo $plink;?>/controller/detail.php?id=<?php echo $order['id']?>" style="font-size:12px">
 													<svg class="glyph stroked clipboard with paper" style="height: 15;width:15;">
 													<use xlink:href="#stroked-clipboard-with-paper"/>
 													</svg>
-													Chi tiết
+													Chi tiết 
 												</a>
 											</li>
 											<a onclick="return confirm('Bạn có chắc chắn xóa không?')?true:false;" href="<?php echo $plink;?>/model/delete_order.php?id=<?php echo $order['id']?>" style="font-size:12px">

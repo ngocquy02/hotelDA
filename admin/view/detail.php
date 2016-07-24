@@ -1,4 +1,4 @@
-<?php
+<?php 
 	
 ?>
 
@@ -67,7 +67,7 @@
 				              </div> 
 				              <div class="col-md-6 form-group">
 								<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
-									<?php
+									<?php $sum=sum_service($room_order['id']);
 										echo $room_order['price'] + $sum['SUM(price*quantity)'] . "&nbsp;(VNĐ)";
 									?>
 								</h3>

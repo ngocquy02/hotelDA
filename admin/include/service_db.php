@@ -50,8 +50,8 @@ function add_service($name,$description,$price) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -162,8 +162,8 @@ function add_room_service($room_order_id,$service_id,$price,$quantity) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -202,12 +202,13 @@ function delete_room_service($id) {
     }
 }
 
-function sum_service() {
+function sum_service($room_order_id) {
     global $db;
     $query = '
-        SELECT SUM(price*quantity) FROM room_service';
+        SELECT SUM(price*quantity) FROM room_service WHERE `room_order_id`=:room_order_id';
     try {
         $statement = $db->prepare($query);
+        $statement->bindValue(':room_order_id', $room_order_id);
         $statement->execute();
         $result = $statement->fetch();
         $statement->closeCursor();

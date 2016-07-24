@@ -1,21 +1,12 @@
 <?php
-  require_once('admin/include/config.php');
-  require_once('admin/include/room_db.php');
-  require_once('admin/include/get_list.php');
-  require_once('admin/include/customer_db.php');
-  require_once('admin/link.php');
-  $max_id= get_room_order_max_id();
-  $room=get_room($max_id['room_id']);
-  $customer=get_customer_id($max_id['customer_id']);
-  $city=get_city_id($customer['city_id']);
-
+  
 ?>
 <!DOCTYPE html>
 <html>
-<?php include('include/head.php'); ?>
+<?php include('../include/head.php'); ?>
 <body>
 <?php
-  include('include/menu.php');
+  include('../include/menu.php');
 ?>
   <div class="container  wrapper-body" style="background: #fff; padding: 0; padding-top : 50px;  padding-bottom : 80px; width:100%;">
     <div class="row" style="width:90%; margin:auto;">
@@ -81,7 +72,7 @@
                   </div>
                 </div>
               </section>
-              <a href="/hotelDA/index.html" class="btn btn-book">Quay Lại </a>         
+              <a href="/hotelDA" class="btn btn-book">Quay Lại </a>         
           </div>
 
         </form>
@@ -89,6 +80,6 @@
       </div>            
     </div>
   </div>
-  <?php include('include/footer.php'); ?>
+  <?php include('../include/footer.php'); ?>
 </body>
 </html>

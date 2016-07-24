@@ -64,7 +64,7 @@
 					<tbody>
 						<tr>
 							<td>
-								
+								1
 							</td>
 							<td>
 								<?php echo date('d/m/Y',strtotime($room_order['date_check_in'])); ?>
@@ -121,7 +121,7 @@
 							<td>
 							</td>
 							<td>
-								<strong><?php echo $room_order['price'] + $sum['SUM(price*quantity)']; ?></strong>
+								<strong><?php $sum=sum_service($_GET['id']); echo $room_order['price'] + $sum['SUM(price*quantity)']; ?></strong>
 							</td>
 						</tr>
 					</tfoot>

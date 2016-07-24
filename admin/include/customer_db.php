@@ -75,8 +75,8 @@ function add_customer($name,$adress,$birth_day,$city,$email,$gender,$password,$p
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -103,8 +103,8 @@ function add_customer_order($name,$adress,$birth_day,$city,$email,$gender,$passp
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);

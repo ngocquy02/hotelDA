@@ -78,8 +78,8 @@ function add_admin($name,$adress,$birth_day,$city_id,$email,$gender,$level_id,$p
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);

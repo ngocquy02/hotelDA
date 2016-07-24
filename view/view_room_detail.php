@@ -14,16 +14,16 @@
 <!--animated-css-->
 <link href="<?php echo $plink;?>admin/img/favicon.ico" rel="shortcut icon">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link href="admin/css/system.css" rel="stylesheet">
-<link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="images/icon1.png" type="image/x-icon" rel="shortcut icon">
-<link href="admin/css/datepicker.css" rel="stylesheet" />
-<script src="admin/js/jquery-1.12.4.min.js"></script>
-<script src="admin/bootstrap/js/bootstrap.min.js"></script>
-<script src="admin/js/bootstrap-datepicker.js"></script>
+<link href="/hotelDA/admin/css/system.css" rel="stylesheet">
+<link href="/hotelDA/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/hotelDA/admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/hotelDA/images/icon1.png" type="image/x-icon" rel="shortcut icon">
+<link href="/hotelDA/admin/css/datepicker.css" rel="stylesheet" />
+<script src="/hotelDA/admin/js/jquery-1.12.4.min.js"></script>
+<script src="/hotelDA/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="/hotelDA/admin/js/bootstrap-datepicker.js"></script>
 
-<link href="admin/css/styles.css" rel="stylesheet">
+<link href="/hotelDA/admin/css/styles.css" rel="stylesheet">
  <!-- script-for-menu -->
 <script>
 	$( "span.menu" ).click(function() {
@@ -52,7 +52,7 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="admin/js/typed.js" type="text/javascript"></script>
+    <script src="/hotelDA/admin/js/typed.js" type="text/javascript"></script>
     <script>
     $(function(){
 
@@ -156,7 +156,7 @@
 			<div class="col col-sm-4 room">
 				<article class="room_detail" style="min-height: 403px;">
 					<div class="item-image">
-						<img itemprop="thumbnailUrl" alt="" src="images/room/phong101.png">
+						<img itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $rooms['img'];?>">
 					</div>
 
 					<div class="room_content">

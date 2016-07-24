@@ -49,8 +49,8 @@ function add_level($name) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -109,8 +109,8 @@ function add_status($name) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
@@ -252,8 +252,8 @@ function add_room_type($name) {
         $statement->closeCursor();
 
         // Get the last product ID that was automatically generated
-        $category_id = $db->lastInsertId();
-        return $category_id;
+        $hotel_id = $db->lastInsertId();
+        return $hotel_id;
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         display_db_error($error_message);
