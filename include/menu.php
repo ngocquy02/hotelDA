@@ -12,8 +12,7 @@
 				<ul class="cl-effect-1">
 					<li><a class="scroll" href="<?php echo $option['link'];?>">TRANG CHỦ</a></li>
 					<li><a class="scroll" href="<?php echo $option['link'];?>/controller/booking_room.php">ĐẶT PHÒNG</a></li>
-					<li><a class="scroll" href="#footer-hotel">THÔNG TIN</a></li>
-					<li><a class="scroll" href="#slide-hotel">HÌNH ẢNH</a></li>
+					<li><a class="scroll" href="<?php echo $option['link'];?>/hinhanh.php">HÌNH ẢNH</a></li>
 					<li><a class="scroll" href="<?php echo $option['link'];?>/controller/contact.php">LIÊN HỆ</a></li>
 				</ul>
 			</div>

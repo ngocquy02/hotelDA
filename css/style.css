@@ -96,3 +96,14 @@ margin-top:20px;
 .form-group label{
     color: #000 !important;
 }
+
+.bg-white{
+    background-color: #FFF;
+    padding: 10px;
+    border:1px solid #0098da !important;
+    border-radius: 7px;
+}
+
+.dropdown-menu{
+    min-width: 300px !important;
+}

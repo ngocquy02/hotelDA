@@ -8,7 +8,7 @@
 <?php
 	include('../include/menu.php');
 ?>
-	<div class="container" style="background: #fff; padding: 0; padding-top : 50px; width:100%;">
+	<div class="container wrapper-body" style="padding: 0; padding-top : 50px; width:100%;">
 		<div class="row" style="width:90%; margin:auto;">
 			<div class="col col-md-7 col-xs-12 room">
 				<article class="" style="min-height: 403px;">
@@ -20,7 +20,7 @@
 				</article>
 			</div>
 			<div class="col col-md-5 col-xs-12 room">
-				<div class="room_content">
+				<div class="room_content bg-white" >
 					<h3>
 						<div class="room_title pull-left">
 							<p><?php $type=get_room_type_id($rooms['room_type_id']);echo $type['name']; ?></p>

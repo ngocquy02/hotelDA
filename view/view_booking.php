@@ -21,7 +21,6 @@
 	        <div id="typed-strings">
                 <span>ĐẶT PHÒNG</span>
             </div>
-            <span id="typed" style="white-space:pre;"></span>
     </h1>
 </div>
 <div class="reservation col-lg-10" style="background: rgba(60, 191, 232,0.4); border-radius:10px; padding:0 20px; margin:0 10%;">
