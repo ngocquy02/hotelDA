@@ -13,7 +13,7 @@
 			<div class="col col-md-7 col-xs-12 room">
 				<article class="" style="min-height: 403px;">
 					<div class="item-image">
-						<img style="width: 100%;margin-bottom:15px;" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $rooms['img'];?>">
+						<img style="width: 100%;margin-bottom:15px;" itemprop="thumbnailUrl" alt="" src="<?php echo $option['link'];?>/admin/images/room/<?php echo $rooms['img'];?>">
 					</div>
 
 
@@ -34,7 +34,7 @@
 						<p><?php echo $rooms['description'];?></p>
 					</div>
 					<div class="clearfix"></div>
-					<a href="/hotelDA"><button type="submit" class="btn btn-primary">Đặt phòng
+					<a href="<?php echo $option['link'];?>"><button type="submit" class="btn btn-primary">Đặt phòng
 					</button>
 					</a>
 				</div>

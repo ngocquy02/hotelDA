@@ -8,7 +8,7 @@
 <?php
 	include('../include/menu.php');
 ?>
-<form class="container wrapper-body" style=" width : 100% ; margin: 0;" method="POST" action="/hotelDA/model/send_mail_contact.php">
+<form class="container wrapper-body" style=" width : 100% ; margin: 0;" method="POST" action="<?php echo $option['link'];?>/model/send_mail_contact.php">
 	<div class="row" style="width:90%; margin: auto;">
 	<h2 class="list_room_title" style="text-align:center; margin:20px 0px;">LIÊN HỆ</h2>
 	<div class="col-md-12" style="padding: auto 0px; margin:auto;">

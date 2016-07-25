@@ -1,5 +1,6 @@
  <?php
  // require_once 'vendor/autoload.php';
+ require_once('../admin/link.php');
  require_once '../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
 
 
@@ -31,4 +32,4 @@ $message = Swift_Message::newInstance('Liên hệ khách hàng')
 
 // Send the message
 $result = $mailer->send($message);
-header ("Location:/hotelDA/controller/success.php ");
+header ("Location:". $option['link']."/controller/success.php ");

@@ -67,8 +67,8 @@
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/service.php"><svg class="glyph stroked paper coffee cup"><use xlink:href="#stroked-paper-coffee-cup"></use></svg>Quản lí dịch vụ</a></li>
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/room_setting.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Quản lí phòng</a></li>
 			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Đặt phòng</a></li>
-			<li><a href="<?php echo $plink;?>/controller/search_room.php"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Thống kê</a></li>
-			<li><a href="<?php echo $plink;?>/controller/user.php""><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Báo cáo</a></li>
+			<li><a href="<?php echo $plink;?>"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Thống kê</a></li>
+			<li><a href="<?php echo $plink;?>""><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Báo cáo</a></li>
 			<li <?php if($_SESSION['level']!='1'){echo "style='display:none'";}else echo "";?>><a href="<?php echo $plink;?>/controller/setting.php"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg>Cài đặt</a></li>
 		</ul>
 

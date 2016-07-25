@@ -158,4 +158,20 @@ function delete_customer_id($id) {
     }
 }
 
+
+function get_customer_max_id() {
+    global $db;
+    $query = 'SELECT * FROM customer ORDER BY ID DESC LIMIT 1';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        echo $error_message;
+        display_db_error($error_message);
+    }
+}
 ?>

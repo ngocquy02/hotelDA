@@ -17,7 +17,7 @@
 		<div class="col col-sm-4 room">
 			<article class="room_detail">
 				<div class="item-image" >
-					<img style="width: 100%;height:225px;" itemprop="thumbnailUrl" alt="" src="/hotelDA/admin/images/room/<?php echo $room['img'];?>">
+					<img style="width: 100%;height:225px;" itemprop="thumbnailUrl" alt="" src="<?php echo $option['link'];?>/admin/images/room/<?php echo $room['img'];?>">
 				</div>
 
 				<div class="room_content">
@@ -35,7 +35,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="room_button" >
-						<a class="btn-book btn btn-info" href="/hotelDA/controller/order_room.php?room_id=<?php echo $room['id']?>"><span>Đặt ngay</span></a>
+						<a class="btn-book btn btn-info" href="<?php echo $option['link'];?>/controller/order_room.php?room_id=<?php echo $room['id']?>"><span>Đặt ngay</span></a>
 					</div>
 				</div>
 			</article>

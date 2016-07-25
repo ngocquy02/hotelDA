@@ -3,6 +3,7 @@
 	require_once('admin/include/admin_db.php');
 	require_once('admin/include/get_list.php');
 	require_once('admin/include/room_db.php');
+	require_once('admin/link.php');
 	$slide=get_list_room();
 	$setting=get_setting();
 	$view=$setting['view'];

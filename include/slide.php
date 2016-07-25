@@ -185,11 +185,11 @@
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 760px; height: 356px; overflow: hidden;">
+        <div id="slide-hotel" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 760px; height: 356px; overflow: hidden;">
         <?php foreach ($slide as $slide ): ?>
             <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="/hotelDA/admin/images/room/<?php echo $slide['img']; ?>" />
-                <img data-u="thumb" src="/hotelDA/admin/images/room/<?php echo $slide['img']; ?>" />
+                <img data-u="image" src="<?php echo $option['link'];?>/admin/images/room/<?php echo $slide['img']; ?>" />
+                <img data-u="thumb" src="<?php echo $option['link'];?>/admin/images/room/<?php echo $slide['img']; ?>" />
             </div>
         <?php endforeach;?>    
             <a data-u="add" href="#" style="display:none"></a>

@@ -9,7 +9,7 @@
 			header ("Location: $plink");
 	}
     add_customer_order($_POST['name'],$_POST['adress'],$_POST['birth_day'],$_POST['city'],$_POST['email'],$_POST['gender'],$_POST['passport'],$_POST['phone']);	
-    $get_customer=get_customer($_POST['email']);
+    $get_customer=get_customer_max_id();
     $get_list_room=get_list_room();
     $date_order=date("Y/m/d");
     $get_room=get_room($_GET['id']);

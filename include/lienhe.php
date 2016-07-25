@@ -2,7 +2,7 @@
 
 ?>
 <div class="col col-md-4 col-xs-12">
-	<form method="POST" action ="model/send_mail_contact.php" id="form">
+	<form method="POST" action ="<?php echo $option['link'];?>/model/send_mail_contact.php" id="form">
 		<div class="row col-md-12" style="background: #fff;padding: 0px;margin:0px;height: 442px; border-radius:10px;">
 			<section>
 				<h2 class="text-info list_room_title" style="text-align:center; margin:20px 0px;">THÔNG TIN LIÊN HỆ</h2>

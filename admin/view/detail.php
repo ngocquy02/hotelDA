@@ -30,7 +30,17 @@
 								<h4>Email : <?php echo $customer['email']; ?></h4>
 				              </div>
 				              <div class="col-md-6 form-group">
-								<h4>Tình trạng phòng : <?php echo $customer['name']; ?></h4>
+								<h4>Tình trạng phòng : 
+									<?php 
+												if ($room_order['status_id']==0) {
+													echo "Chưa thanh toán";
+												}else{
+													if ($room_order['status_id']==1) {
+														echo "Đã thanh toán";
+													}
+												}
+											?>		
+								</h4>
 				              </div>
 				              <div class="col-md-6 form-group"> 
 								<h4>Ngày đặt : <?php echo date('d/m/Y',strtotime($room_order['date_order'])) ; ?></h4>
@@ -75,7 +85,9 @@
 
 				       </div>
 				       <div class="col-md-4"></div>
-				           <a onclick="return confirm('Thanh toán cho khách hàng?')?true:false;" type="submit" class="col-md-2 btn btn-primary" style=" margin-top:10px;">Thanh toán</a>
+				           <a href="<?php echo $plink;?>/model/pay.php?id=<?php echo $_GET['id'];?>" onclick="return confirm('Thanh toán cho khách hàng?')?true:false;" type="submit" class="col-md-2 btn btn-primary" style=" margin-top:10px;<?php if ($room_order['status_id']==1) {
+													echo "display: none;";
+												} ?>">Thanh toán</a>
 				           <a type="submit" href="<?php echo $plink;?>/controller/bill.php?id=<?php echo $_GET['id'];?>" class="col-md-2 btn btn-primary" style="margin-left:10px; margin-top:10px;" target="blank">In hóa đơn</a>   
 				  </section>
 				</div>

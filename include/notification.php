@@ -12,7 +12,7 @@
     <div class="row" style="width:90%; margin:auto;">
 
       <div class="col col-md-12 col-xs-12">
-        <form method="POST" action ="model/add_room_order.php?room_id=<?php echo $_GET['room_id']?>" id="form">
+        <form method="POST" action ="<?php echo $option['link'];?>/model/add_room_order.php?room_id=<?php echo $_GET['room_id']?>" id="form">
           <div class="row col-md-12" style="padding: 0px; margin:0px;">
             <section>
                 <h2 class="list_room_title" style="text-align:center; margin:20px 0px;">THÔNG TIN ĐẶT PHÒNG</h2>
@@ -72,7 +72,7 @@
                   </div>
                 </div>
               </section>
-              <a href="/hotelDA" class="btn btn-book">Quay Lại </a>         
+              <a href="<?php echo $option['link'];?>" class="btn btn-book">Quay Lại </a>         
           </div>
 
         </form>

@@ -44,4 +44,4 @@ $message = Swift_Message::newInstance('Thông tin đặt phòng')
 
 // Send the message
 $result = $mailer->send($message);
-header ("Location: /hotelDA/controller/notification.php");
+header ("Location:". $option['link']."/controller/notification.php");
